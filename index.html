@@ -1,51 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Basic Example with External JSX</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <h1>Basic Example with External JSX</h1>
     <div id="container">
-        <p>
-            If you can see this, React is not working right. This is probably because you&apos;re viewing
-            this on your file system instead of a web server. Try running
-        <pre>
-          python -m SimpleHTTPServer
-        </pre>
-        </p>
+
     </div>
-    <h4>Example Details</h4>
-    <p>This is written with JSX in a separate file and transformed in the browser.</p>
-    <p>
-        Learn more about React at
-        <a href="https://facebook.github.io/react" target="_blank">facebook.github.io/react</a>.
-    </p>
-    <script src="assets/js/react.min.js"></script>
+
+    <!-- <script src="assets/js/react.min.js"></script> -->
+    <script src="assets/js/react.js"></script>
     <script src="assets/js/react-dom.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script type="text/babel">
-        var ExampleApplication = React.createClass({
-            render: function () {
-                var elapsed = Math.round(this.props.elapsed / 100);
-                var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0');
-                var message =
-                    'React has been successfully running for ' + seconds + ' seconds.';
-
-                return <p>{message}</p>;
-            }
-        });
-
-        var start = new Date().getTime();
-
-        setInterval(function () {
-            ReactDOM.render(
-                <ExampleApplication elapsed={new Date().getTime() - start} />,
-                document.getElementById('container')
-            );
-        }, 50);
+        function Main() {
+            return <div className="wrapper flex column">
+                <header>
+                    <div className="container">
+                        <div className="logo-container flex flex-align-center">
+                            <div className="logo-img-container"><span></span></div>
+                            <div className="logo-text-container">
+                                <h2>Цифровой образовательный контент</h2>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div className="breadcrumbs">
+                    <div className="container">
+                        <h3>ПМ.09 Проектирование, разработка и оптимизация веб-приложений</h3>
+                    </div>
+                </div>
+                <main className="height-100">
+                    <div className="main-wrapper height-100">
+                        <div className="container height-100">
+                            <div className="buttons-continer height-100 flex flex-align-center">
+                                <ul>
+                                    <li>
+                                        <div className="eom-button-container flex flex-align-center">
+                                            <span><i className="icons button-icons icon-book"></i></span>
+                                            <span>
+                                                <h4>ЭОМ1</h4>
+                                            </span>
+                                            <div className="eom-button-container-text">
+                                                <span>Освоение нового материал</span>
+                                            </div>
+                                            <div className="flex f-justify-end flex-align-center f-grow-1">
+                                                <span><i className="icons icon-play"></i></span>
+                                                <span><i className="icons icon-info"></i></span>
+                                            </div>
+                                        </div>
+                                        <div><span></span><span></span></div>
+                                    </li>
+                                    <li>
+                                        <div className="eom-button-container flex flex-align-center">
+                                            <span><i className="icons button-icons icon-union"></i></span>
+                                            <span>
+                                                <h4>ЭОМ2</h4>
+                                            </span>
+                                            <div className="eom-button-container-text">
+                                                <span>Применение изученного материала</span>
+                                            </div>
+                                            <div className="flex f-justify-end flex-align-center f-grow-1">
+                                                <span><i className="icons icon-play"></i></span>
+                                                <span><i className="icons icon-info"></i></span>
+                                            </div>
+                                        </div>
+                                        <div><span></span><span></span></div>
+                                    </li>
+                                    <li>
+                                        <div className="eom-button-container flex flex-align-center">
+                                            <span><i className="icons button-icons icon-ok"></i></span>
+                                            <span>
+                                                <h4>ЭОМ3</h4>
+                                            </span>
+                                            <div className="eom-button-container-text">
+                                                <span>Диагностика знаний, умений, навыков</span>
+                                            </div>
+                                            <div className="flex f-justify-end flex-align-center f-grow-1">
+                                                <span><i className="icons icon-play"></i></span>
+                                                <span><i className="icons icon-info"></i></span>
+                                            </div>
+                                        </div>
+                                        <div><span></span><span></span></div>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <h1 className="text-center">Разработка сетевых приложений</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <div className="container">
+                        <ul className="flex flex-align-center">
+                            <li><i className="footer-logo-container"></i></li>
+                            <li>
+                                <h3 className="footer-text">ФГОС СПО 09.02.07 Информационные системы и программирование</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>;
+        }
+        
+        ReactDOM.render(
+            <Main />,
+            document.getElementById('container')
+        );
     </script>
 </body>
 
