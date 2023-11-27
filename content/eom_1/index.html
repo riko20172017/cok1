@@ -4,17 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
-    
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         .wrapper {
             display: flex;
+            flex-flow: column nowrap;
+            height: 100vh;
+        }
+
+        header {
+            height: 100px;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            height: 100px;
         }
     </style>
 </head>
 
 <body>
-    <div id="container">
+    <!-- <div id="container">
         <p>
           To install React, follow the instructions on
           <a href="https://github.com/facebook/react/">GitHub</a>.
@@ -23,11 +44,17 @@
           If you can see this, React is not working right.
           If you checked out the source from GitHub make sure to run <code>grunt</code>.
         </p>
-      </div>
+      </div> -->
     <div class="wrapper">
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <header style="background-color: red;"></header>
+        <main style="background-color: green;">
+            <div class="main-wrapper flex row">
+                <div class="aside">
+                </div>
+                <article></article>
+            </div>
+        </main>
+        <footer style="background-color: yellow;"></footer>
     </div>
     <script src="../../assets/js/react.min.js"></script>
     <script src="../../assets/js/react-dom.min.js"></script>

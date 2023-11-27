@@ -1,0 +1,19 @@
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.main-wrapper {
+    height: 100%;
+}
+
+.aside {
+    width: 200px;
+}
