@@ -1,5 +1,11 @@
 :root {
     --main-bg-color: #212529;
+    --second-color: #007ca4;
+    --svg-play: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>');
+    --svg-play-hover: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="rgb(0 124 164)" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>');
+    --svg-info: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,50,50"><g><path d="M44,24c0,11.045 -8.955,20 -20,20c-11.045,0 -20,-8.955 -20,-20c0,-11.045 8.955,-20 20,-20c11.045,0 20,8.955 20,20z" fill="white"></path><path d="M22,22h4v11h-4zM26.5,16.5c0,1.379 -1.121,2.5 -2.5,2.5c-1.379,0 -2.5,-1.121 -2.5,-2.5c0,-1.379 1.121,-2.5 2.5,-2.5c1.379,0 2.5,1.121 2.5,2.5z" fill="rgb(33 37 41)"></path></g></svg>');
+    --svg-info-hover: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,50,50"><g><path d="M44,24c0,11.045 -8.955,20 -20,20c-11.045,0 -20,-8.955 -20,-20c0,-11.045 8.955,-20 20,-20c11.045,0 20,8.955 20,20z" fill="rgb(0 124 164)"></path><path d="M22,22h4v11h-4zM26.5,16.5c0,1.379 -1.121,2.5 -2.5,2.5c-1.379,0 -2.5,-1.121 -2.5,-2.5c0,-1.379 1.121,-2.5 2.5,-2.5c1.379,0 2.5,1.121 2.5,2.5z" fill="white"></path></g></svg>');
+
 }
 
 @font-face {
@@ -59,8 +65,15 @@ li {
     justify-content: end;
 }
 
-.flex-align-center {
+.f-align-center {
     align-items: center;
+}
+
+.f-align-stretch {
+    align-items: stretch;
+}
+.f-justify-between {
+    justify-content: space-between;
 }
 
 .f-grow-1 {
@@ -75,6 +88,18 @@ li {
     text-align: center;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+p-5 {
+    padding: 5px;
+}
+
 .main-wrapper {
     height: 100%;
 }
@@ -83,25 +108,17 @@ li {
     width: 200px;
 }
 
-:root {
-    --main-bg-color: #212529;
-}
-
 .wrapper {
     height: 100vh;
 }
 
 header {
     height: 100px;
-    background-color: black;
+    background-color: var(--main-bg-color);
 }
 
 main {
     flex: 1;
-}
-
-footer {
-    height: 100px;
 }
 
 .flex-align-center {
@@ -109,7 +126,7 @@ footer {
 }
 
 .container {
-    max-width: 992px;
+    width: 992px;
     margin: 0 auto;
 }
 
@@ -121,14 +138,12 @@ footer {
     padding: 5px 0;
 }
 
-header,
-footer {
-    flex-basis: 50px;
+.breadcrumbs-wrapper {
+    border-bottom: 4px solid var(--main-bg-color);
 }
 
 .breadcrumbs {
-    padding: 5px 0;
-    border-bottom: 4px solid;
+    padding: 10px 0;
 }
 
 .buttons-continer li:nth-child(2) {
@@ -136,10 +151,28 @@ footer {
     margin-top: 10px;
 }
 
+.info-buttons {
+    font-size: 14px;
+}
+
+.info-buttons li:hover {
+    background-color: var(--second-color);
+    color:white
+}
+
+.info-buttons ul li:nth-child(1){
+    margin-right: 0px;
+}
+
+.info-buttons ul li span{
+    border-left: 2px solid rgb(100, 100, 100);
+    padding: 0 10px 0 5px;
+    text-decoration: 1px dotted underline black;
+}
+
 .logo-container {
     width: 100%;
     padding: 10px 0;
-    background-color: black;
     display: flex;
     align-content: flex-start;
 }
@@ -171,10 +204,12 @@ footer {
 }
 
 .eom-button-container {
+    height: 100px;
     background-color: var(--main-bg-color);
     color: white;
-    padding: 20px 20px;
+    padding: 0px 20px;
     border-radius: 5px;
+    min-width: 550px;
 }
 
 .eom-button-container h4 {
@@ -191,19 +226,32 @@ footer {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    vertical-align: middle;
+}
+
+.icon-wrapper {
+    padding: 5px;
 }
 
 .icon-play {
-    width: 30px;
-    height: 30px;
-    background-image: url("../img/play.svg");
-    padding: 0 20px;
+    width: 40px;
+    height: 40px;
+    background-image: var(--svg-play);
+    margin: 0 10px 0 20px;
+}
+
+.icon-play:hover {
+    background-image: var(--svg-play-hover);
 }
 
 .icon-info {
     width: 20px;
     height: 20px;
-    background-image: url("../img/info.svg");
+    background-image: var(--svg-info);
+}
+
+.icon-wrapper:hover .icon-info {
+    background-image: var(--svg-info-hover);
 }
 
 .button-icons {

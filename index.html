@@ -17,12 +17,18 @@
     <script src="assets/js/react.js"></script>
     <script src="assets/js/react-dom.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
+    <script type="text/babel" src="assets/js/component.js"></script>
     <script type="text/babel">
         function Main() {
+            // const { useState } = React;
+            console.log(React);
+            [cntModal, setCntModal] = React.useState(false);
+            let contentModal = false;
+            let keywordModal = false;
             return <div className="wrapper flex column">
                 <header>
                     <div className="container">
-                        <div className="logo-container flex flex-align-center">
+                        <div className="logo-container flex f-align-center">
                             <div className="logo-img-container"><span></span></div>
                             <div className="logo-text-container">
                                 <h2>Цифровой образовательный контент</h2>
@@ -30,18 +36,28 @@
                         </div>
                     </div>
                 </header>
-                <div className="breadcrumbs">
+                <div className="breadcrumbs-wrapper">
                     <div className="container">
-                        <h3>ПМ.09 Проектирование, разработка и оптимизация веб-приложений</h3>
+                        <div className="flex f-justify-between">
+                            <div className="breadcrumbs">
+                                <h3>ПМ.09 Проектирование, разработка и оптимизация веб-приложений</h3>
+                            </div>
+                            <div className="info-buttons">
+                                <ul className="height-100 flex">
+                                    <li className="pointer height-100 flex f-align-center"><span onClick={() => { contentModal = true }}>О контенте</span></li>
+                                    <li className="pointer height-100 flex f-align-center"><span>Ключевые слова</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <main className="height-100">
                     <div className="main-wrapper height-100">
                         <div className="container height-100">
-                            <div className="buttons-continer height-100 flex flex-align-center">
+                            <div className="buttons-continer height-100 flex f-align-center">
                                 <ul>
                                     <li>
-                                        <div className="eom-button-container flex flex-align-center">
+                                        <div className="eom-button-container flex f-align-center">
                                             <span><i className="icons button-icons icon-book"></i></span>
                                             <span>
                                                 <h4>ЭОМ1</h4>
@@ -49,15 +65,15 @@
                                             <div className="eom-button-container-text">
                                                 <span>Освоение нового материал</span>
                                             </div>
-                                            <div className="flex f-justify-end flex-align-center f-grow-1">
-                                                <span><i className="icons icon-play"></i></span>
-                                                <span><i className="icons icon-info"></i></span>
+                                            <div className="flex f-justify-end f-align-center f-grow-1">
+                                                <span className="pointer"><i className="icons icon-play"></i></span>
+                                                <span className="icon-wrapper pointer p-5"><i className="icons icon-info"></i></span>
                                             </div>
                                         </div>
                                         <div><span></span><span></span></div>
                                     </li>
                                     <li>
-                                        <div className="eom-button-container flex flex-align-center">
+                                        <div className="eom-button-container flex f-align-center">
                                             <span><i className="icons button-icons icon-union"></i></span>
                                             <span>
                                                 <h4>ЭОМ2</h4>
@@ -65,15 +81,16 @@
                                             <div className="eom-button-container-text">
                                                 <span>Применение изученного материала</span>
                                             </div>
-                                            <div className="flex f-justify-end flex-align-center f-grow-1">
-                                                <span><i className="icons icon-play"></i></span>
-                                                <span><i className="icons icon-info"></i></span>
+                                            <div className="flex f-justify-end f-align-center f-grow-1">
+                                                <span className="pointer"><i className="icons icon-play"></i></span>
+                                                <span className="icon-wrapper pointer p-5">
+                                                    <i className="icons icon-info"></i></span>
                                             </div>
                                         </div>
                                         <div><span></span><span></span></div>
                                     </li>
                                     <li>
-                                        <div className="eom-button-container flex flex-align-center">
+                                        <div className="eom-button-container flex f-align-center">
                                             <span><i className="icons button-icons icon-ok"></i></span>
                                             <span>
                                                 <h4>ЭОМ3</h4>
@@ -81,16 +98,18 @@
                                             <div className="eom-button-container-text">
                                                 <span>Диагностика знаний, умений, навыков</span>
                                             </div>
-                                            <div className="flex f-justify-end flex-align-center f-grow-1">
-                                                <span><i className="icons icon-play"></i></span>
-                                                <span><i className="icons icon-info"></i></span>
+                                            <div className="flex f-justify-end f-align-center f-grow-1">
+                                                <span className="pointer"><i className="icons icon-play"></i></span>
+                                                <span className="icon-wrapper pointer p-5">
+                                                    <i className="icons icon-info"></i></span>
                                             </div>
                                         </div>
                                         <div><span></span><span></span></div>
                                     </li>
                                 </ul>
-                                <div>
+                                <div className="text-center">
                                     <h1 className="text-center">Разработка сетевых приложений</h1>
+                                    <img src="assets/img/img2.png" width="250px" alt="" srcSet="" />
                                 </div>
                             </div>
                         </div>
@@ -98,7 +117,7 @@
                 </main>
                 <footer>
                     <div className="container">
-                        <ul className="flex flex-align-center">
+                        <ul className="flex f-align-center">
                             <li><i className="footer-logo-container"></i></li>
                             <li>
                                 <h3 className="footer-text">ФГОС СПО 09.02.07 Информационные системы и программирование</h3>
@@ -106,9 +125,11 @@
                         </ul>
                     </div>
                 </footer>
+                {console.log(contentModal)}
+                {contentModal == true ? <Modal /> : ""}
             </div>;
         }
-        
+
         ReactDOM.render(
             <Main />,
             document.getElementById('container')
