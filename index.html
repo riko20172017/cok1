@@ -136,6 +136,10 @@
                     <Modal toggle={() => { setModal("") }}>
                         {modal == "keyword" ? "keyword" : "content"}
                     </Modal>}
+                {modal &&
+                    <Modal toggle={() => { setModal("") }}>
+                        {modal == "keyword" ? "keyword" : "content"}
+                    </Modal>}
             </div>;
         }
 
