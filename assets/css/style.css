@@ -160,10 +160,6 @@ footer {
     color:white
 }
 
-.info-buttons ul li:nth-child(1){
-    margin-right: 0px;
-}
-
 .info-buttons ul li span{
     border-left: 2px solid rgb(100, 100, 100);
     padding: 0 10px 0 5px;
@@ -269,4 +265,15 @@ footer {
 
 .icon-ok {
     background-image: url("../img/ok.svg");
+}
+
+/* Modals =============================================================== */
+
+.modalWrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.782);
 }

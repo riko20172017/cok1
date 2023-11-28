@@ -14,16 +14,16 @@
     </div>
 
     <!-- <script src="assets/js/react.min.js"></script> -->
-    <script src="assets/js/react.js"></script>
-    <script src="assets/js/react-dom.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script type="text/babel" src="assets/js/component.js"></script>
-    <script type="text/babel">
+    <script src="assets/js/react.production.min.js"></script>
+    <script src="assets/js/react-dom.production.min.js"></script>
+    <script src="assets/js/babel.min.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/component.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd">
+        import Modal from "assets/js/component.js";
+        import { useState } from "React"
+
         function Main() {
-            // const { useState } = React;
-            console.log(React);
-            [cntModal, setCntModal] = React.useState(false);
-            let contentModal = false;
+            const [modal, setModal] = useState("");
             let keywordModal = false;
             return <div className="wrapper flex column">
                 <header>
@@ -44,8 +44,16 @@
                             </div>
                             <div className="info-buttons">
                                 <ul className="height-100 flex">
-                                    <li className="pointer height-100 flex f-align-center"><span onClick={() => { contentModal = true }}>О контенте</span></li>
-                                    <li className="pointer height-100 flex f-align-center"><span>Ключевые слова</span></li>
+                                    <li className="pointer height-100 flex f-align-center"
+                                        onClick={() => { setModal("content") }}>
+                                        <span>О контенте
+                                        </span>
+                                    </li>
+                                    <li className="pointer height-100 flex f-align-center"
+                                        onClick={() => { setModal("keyword") }}>
+                                        <span >Ключевые слова
+                                        </span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -125,8 +133,10 @@
                         </ul>
                     </div>
                 </footer>
-                {console.log(contentModal)}
-                {contentModal == true ? <Modal /> : ""}
+                {modal &&
+                    <Modal toggle={() => { setModal("") }}>
+                        {modal == "keyword" ? "keyword" : "content"}
+                    </Modal>}
             </div>;
         }
 

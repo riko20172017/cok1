@@ -1,5 +1,7 @@
-function Modal () {
-    return <div>111</div>
+function Modal({ toggle, children }) {
+    return <div className="modalWrapper"><button onClick={() => toggle()}>{children}</button>
+
+    </div>
 }
 
-window.Modal = Modal
+export default Modal
