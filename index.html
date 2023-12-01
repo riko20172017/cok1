@@ -16,8 +16,17 @@
     <script src="assets/js/react-dom.production.min.js"></script>
     <script src="assets/js/babel.min.js"></script>
     <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/modal.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+        src="assets/js/components/ContentModal.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+        src="assets/js/components/KeywordModal.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+        src="assets/js/components/GuidanceModal.js"></script>
     <script type="text/babel" data-plugins="transform-es2015-modules-umd">
         import Modal from "assets/js/modal";
+        import ContentModal from "assets/js/ContentModal";
+        import KeywordModal from "assets/js/KeywordModal";
+        import GuidanceModal from "assets/js/GuidanceModal";
         import { useState } from "React"
 
         function Main() {
@@ -72,7 +81,9 @@
                                             </div>
                                             <div className="flex f-justify-end f-align-center f-grow-1">
                                                 <span className="pointer"><i className="icons icon-play"></i></span>
-                                                <span className="icon-wrapper pointer p-5"><i className="icons icon-info"></i></span>
+                                                <span onClick={() => { setModal("eom-1") }} className="icon-wrapper pointer p-5">
+                                                    <i className="icons icon-info"></i>
+                                                </span>
                                             </div>
                                         </div>
                                         <div><span></span><span></span></div>
@@ -88,7 +99,7 @@
                                             </div>
                                             <div className="flex f-justify-end f-align-center f-grow-1">
                                                 <span className="pointer"><i className="icons icon-play"></i></span>
-                                                <span className="icon-wrapper pointer p-5">
+                                                <span onClick={() => { setModal("eom-2") }} className="icon-wrapper pointer p-5">
                                                     <i className="icons icon-info"></i></span>
                                             </div>
                                         </div>
@@ -105,7 +116,7 @@
                                             </div>
                                             <div className="flex f-justify-end f-align-center f-grow-1">
                                                 <span className="pointer"><i className="icons icon-play"></i></span>
-                                                <span className="icon-wrapper pointer p-5">
+                                                <span onClick={() => { setModal("eom-3") }} className="icon-wrapper pointer p-5">
                                                     <i className="icons icon-info"></i></span>
                                             </div>
                                         </div>
@@ -132,7 +143,11 @@
                 </footer>
                 {modal &&
                     <Modal toggle={() => { setModal("") }}>
-                        {modal == "keyword" ? "keyword" : "content"}
+                        {modal == "keyword" && <KeywordModal />}
+                        {modal == "content" && <ContentModal />}
+                        {modal == "eom-1" && <GuidanceModal eom={modal} />}
+                        {modal == "eom-2" && <GuidanceModal eom={modal} />}
+                        {modal == "eom-3" && <GuidanceModal eom={modal} />}
                     </Modal>}
             </div>;
         }
