@@ -5,7 +5,8 @@
     --svg-play-hover: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="rgb(0 124 164)" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>');
     --svg-info: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,50,50"><g><path d="M44,24c0,11.045 -8.955,20 -20,20c-11.045,0 -20,-8.955 -20,-20c0,-11.045 8.955,-20 20,-20c11.045,0 20,8.955 20,20z" fill="white"></path><path d="M22,22h4v11h-4zM26.5,16.5c0,1.379 -1.121,2.5 -2.5,2.5c-1.379,0 -2.5,-1.121 -2.5,-2.5c0,-1.379 1.121,-2.5 2.5,-2.5c1.379,0 2.5,1.121 2.5,2.5z" fill="rgb(33 37 41)"></path></g></svg>');
     --svg-info-hover: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,50,50"><g><path d="M44,24c0,11.045 -8.955,20 -20,20c-11.045,0 -20,-8.955 -20,-20c0,-11.045 8.955,-20 20,-20c11.045,0 20,8.955 20,20z" fill="rgb(0 124 164)"></path><path d="M22,22h4v11h-4zM26.5,16.5c0,1.379 -1.121,2.5 -2.5,2.5c-1.379,0 -2.5,-1.121 -2.5,-2.5c0,-1.379 1.121,-2.5 2.5,-2.5c1.379,0 2.5,1.121 2.5,2.5z" fill="white"></path></g></svg>');
-
+    --svg-close: url('data:image/svg+xml,\ <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z" fill="currentColor"/><path clip-rule="evenodd" d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" fill="currentColor" fill-rule="evenodd"/></svg>');
+    --svg-close-hover: url('data:image/svg+xml,\ <svg height="23"  width="23" xmlns="http://www.w3.org/2000/svg"><path d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z" fill="red"/><path clip-rule="evenodd" d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z" fill="red" fill-rule="evenodd"/></svg>');
 }
 
 @font-face {
@@ -61,6 +62,10 @@ li {
     flex-direction: column;
 }
 
+.f-justify-center {
+    justify-content: center;
+}
+
 .f-justify-end {
     justify-content: end;
 }
@@ -72,6 +77,7 @@ li {
 .f-align-stretch {
     align-items: stretch;
 }
+
 .f-justify-between {
     justify-content: space-between;
 }
@@ -88,8 +94,16 @@ li {
     text-align: center;
 }
 
+.text-right {
+    text-align: right;
+}
+
 .pointer {
     cursor: pointer;
+}
+
+.block {
+    display: block;
 }
 
 .inline-block {
@@ -157,10 +171,10 @@ footer {
 
 .info-buttons li:hover {
     background-color: var(--second-color);
-    color:white
+    color: white
 }
 
-.info-buttons ul li span{
+.info-buttons ul li span {
     border-left: 2px solid rgb(100, 100, 100);
     padding: 0 10px 0 5px;
     text-decoration: 1px dotted underline black;
@@ -269,11 +283,55 @@ footer {
 
 /* Modals =============================================================== */
 
-.modalWrapper {
+.content-modal {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.782);
+}
+
+.content-modal h3 {
+    margin-bottom: 5px;
+    background-color: #0b044717;
+}
+
+.content-modal p {
+    margin: 10px 0 25px 0;
+    font-size: 14px;
+}
+
+.modalWrapper {
+    background-color: white;
+    text-align: justify;
+    line-height: 1.4;
+    border-radius: 10px;
+}
+
+.modalWrapper > span {
+    padding: 20px 40px 0 0;
+}
+
+.modal-container {
+    width: 700px;
+    padding: 10px 50px 50px;
+}
+
+.guidanceModal {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px 20px;
+}
+
+.icon-close {
+    width: 40px;
+    height: 40px;
+    background-image: var(--svg-close);
+    background-size: contain;
+}
+
+.icon-close:hover {
+    background-image: var(--svg-close-hover);
 }
