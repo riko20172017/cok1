@@ -127,7 +127,6 @@ p-5 {
 }
 
 header {
-    height: 100px;
     background-color: var(--main-bg-color);
 }
 
@@ -140,12 +139,11 @@ main {
 }
 
 .container {
-    width: 992px;
+    width: 1200px;
     margin: 0 auto;
 }
 
 footer {
-    height: 75px;
     background-color: var(--main-bg-color);
     width: 100%;
     color: white;
@@ -185,13 +183,6 @@ footer {
     padding: 10px 0;
     display: flex;
     align-content: flex-start;
-}
-
-.logo-img-container {
-    width: 75px;
-    height: 68px;
-    display: inline-block;
-    background-image: url("../img/header-logo.png");
 }
 
 .footer-logo-container {
@@ -298,7 +289,7 @@ footer {
 }
 
 .content-modal p {
-    margin: 10px 0 25px 0;
+    margin: 5px 0 10px 0;
     font-size: 14px;
 }
 
@@ -309,13 +300,13 @@ footer {
     border-radius: 10px;
 }
 
-.modalWrapper > span {
+.modalWrapper>span {
     padding: 20px 40px 0 0;
 }
 
 .modal-container {
     width: 700px;
-    padding: 10px 50px 50px;
+    padding: 10px 50px 30px;
 }
 
 .guidanceModal {
@@ -334,4 +325,27 @@ footer {
 
 .icon-close:hover {
     background-image: var(--svg-close-hover);
+}
+
+.eoms .logo-container{
+    padding: 5px 0;
+}
+
+.eoms ol li{
+    list-style: decimal;
+    padding: 5px 0;
+}
+
+.eoms .eom-content {
+    padding-top: 20px;
+}
+
+.eoms .eom-content-head {
+    width: 200px;
+}
+.eoms .eom-content-desc {
+    width: 300px;
+}
+.eoms .eom-content-anim {
+    width: 700px;
 }

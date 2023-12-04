@@ -4,62 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .wrapper {
-            display: flex;
-            flex-flow: column nowrap;
-            height: 100vh;
-        }
-
-        header {
-            height: 100px;
-        }
-
-        main {
-            flex: 1;
-        }
-
-        footer {
-            height: 100px;
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Главная</title>
 </head>
 
 <body>
-    <!-- <div id="container">
-        <p>
-          To install React, follow the instructions on
-          <a href="https://github.com/facebook/react/">GitHub</a>.
-        </p>
-        <p>
-          If you can see this, React is not working right.
-          If you checked out the source from GitHub make sure to run <code>grunt</code>.
-        </p>
-      </div> -->
-    <div class="wrapper">
-        <header style="background-color: red;"></header>
-        <main style="background-color: green;">
-            <div class="main-wrapper flex row">
-                <div class="aside">
+    <div id="container"></div>
+
+    <!-- <script src="assets/js/react.min.js"></script> -->
+    <script src="/assets/js/react.production.min.js"></script>
+    <script src="/assets/js/react-dom.production.min.js"></script>
+    <script src="/assets/js/babel.min.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="/assets/js/modal.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+        src="/assets/js/components/eom/Header.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+        src="/assets/js/components/eom/Footer.jsx"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd">
+        import Modal from "assets/js/modal";
+        import Header from "assets/js/Header";
+        import Footer from "assets/js/Footer";
+        import { useState } from "React"
+
+        function Main() {
+            const [modal, setModal] = useState("");
+            return <div className="wrapper flex column eoms">
+                <header>
+                    <div className="container">
+                        <Header />
+                    </div>
+                </header>
+                <div className="breadcrumbs-wrapper">
+                    <div className="container">
+                        <div className="flex f-justify-between">
+                            <div className="breadcrumbs">
+                                <h3>ПМ.09 Проектирование, разработка и оптимизация веб-приложений</h3>
+                            </div>
+                            <div className="info-buttons">
+                                <ul className="height-100 flex">
+                                    <li className="pointer height-100 flex f-align-center"
+                                        onClick={() => { setModal("content") }}>
+                                        <span>О контенте
+                                        </span>
+                                    </li>
+                                    <li className="pointer height-100 flex f-align-center"
+                                        onClick={() => { setModal("keyword") }}>
+                                        <span >Ключевые слова
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <article></article>
-            </div>
-        </main>
-        <footer style="background-color: yellow;"></footer>
-    </div>
-    <script src="../../assets/js/react.min.js"></script>
-    <script src="../../assets/js/react-dom.min.js"></script>
-    <script src="../../assets/js/browser.min.js"></script>
-    <script type="text/babel" src="assets/js/main.js"></script>
+                <main className="height-100">
+                    <div className="main-wrapper height-100">
+                        <div className="container height-100">
+                            <div className="flex eom-content">
+                                <div className="eom-content-head">
+                                    <ol >
+                                        <li><span>Основы синтаксиса</span></li>
+                                        <li><span>Типы</span></li>
+                                        <li><span>Переменные</span></li>
+                                        <li><span>Операторы и выражения</span></li>
+                                        <li><span>Управляющие конструкции</span></li>
+                                        <li><span>Функции</span></li>
+                                        <li><span>Классы</span></li>
+                                    </ol></div>
+                                <div className="eom-content-desc"></div>
+                                <div className="eom-content-anim"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <div className="container">
+                        <Footer />
+                    </div>
+                </footer>
+            </div>;
+        }
+        ReactDOM.render(
+            <Main />,
+            document.getElementById('container')
+        );
+    </script>
 </body>
 
 </html>
