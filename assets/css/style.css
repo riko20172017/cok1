@@ -50,6 +50,10 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .flex {
     display: flex;
 }
@@ -116,6 +120,7 @@ p-5 {
 
 .main-wrapper {
     height: 100%;
+    background-color: #f6f7f9;
 }
 
 .aside {
@@ -327,25 +332,41 @@ footer {
     background-image: var(--svg-close-hover);
 }
 
-.eoms .logo-container{
-    padding: 5px 0;
+.eom-content {
+    font-size: 14px;
 }
 
-.eoms ol li{
-    list-style: decimal;
+.eoms .logo-container {
     padding: 5px 0;
-}
-
-.eoms .eom-content {
-    padding-top: 20px;
 }
 
 .eoms .eom-content-head {
-    width: 200px;
+    width: 30%;
 }
-.eoms .eom-content-desc {
-    width: 300px;
-}
+
 .eoms .eom-content-anim {
-    width: 700px;
+    width: 70%px;
+}
+
+.eoms .topic-title>li>span,
+.eoms .page-title a {
+    display: block;
+    border-bottom: 1px solid var(--second-color);
+    padding: 7px 4px 7px 4px;
+}
+
+.eoms .page-title a {
+    padding-left: 20px;
+}
+
+.eoms .page-title a {
+    padding-left: 20px;
+}
+
+.eom-content-container {
+    padding: 10px;
+}
+
+.eom-content-container>div {
+    background-color: white;
 }
