@@ -342,16 +342,20 @@ footer {
 
 .eoms .eom-content-head {
     width: 30%;
+    background-color: white;
 }
 
 .eoms .eom-content-anim {
     width: 70%px;
 }
 
+.eoms .topic-title>li>span {
+    font-weight: bold;
+}
+
 .eoms .topic-title>li>span,
 .eoms .page-title a {
     display: block;
-    border-bottom: 1px solid var(--second-color);
     padding: 7px 4px 7px 4px;
 }
 
@@ -369,4 +373,20 @@ footer {
 
 .eom-content-container>div {
     background-color: white;
+}
+
+.topic-title-wrapper,
+.eom-content-container>div {
+    border: 1px solid #e7e7e7;
+}
+
+.eoms .page-title {
+    transition: max-height 0.4s ease-in-out;
+    max-height: 500px;
+    height: auto
+}
+
+.eoms .menuhidden > .page-title {
+    max-height: 0;
+    overflow: hidden;
 }

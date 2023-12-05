@@ -24,10 +24,20 @@
         import Modal from "assets/js/modal";
         import Header from "assets/js/Header";
         import Footer from "assets/js/Footer";
-        import { useState } from "React"
+        import { useState, useRef } from "React"
 
         function Main() {
             const [modal, setModal] = useState("");
+            const [menuel, setMenuel] = useState([]);
+
+            const handleClick = (el) => {
+                if (menuel.includes(el)) {
+                    setMenuel(menuel.filter(a => a !== el))
+                }
+                else {
+                    setMenuel([...menuel, el])
+                }
+            };
             return <div className="wrapper flex column eoms">
                 <header>
                     <div className="container">
@@ -62,9 +72,12 @@
                         <div className="container height-100">
                             <div className="flex eom-content height-100">
                                 <div className="eom-content-head">
+                                    <div style={{ height: "50px" }}></div>
                                     <div class="topic-title-wrapper height-100">
                                         <ul className="topic-title">
-                                            <li><span>1. Основы синтаксиса</span>
+                                            <li onClick={() => handleClick(1)}
+                                                className={menuel.includes(1) && "menuhidden"}>
+                                                <span>1. Основы синтаксиса</span>
                                                 <ul className="page-title">
                                                     <li><a href="\content\eom_1\content\1.1.html" target="frame">1.1 Что такое PHP?</a></li>
                                                     <li><a href="\content\eom_1\content\1.2.html" target="frame">1.2 Теги PHP</a></li>
@@ -72,7 +85,8 @@
                                                     <li><a href="\content\eom_1\content\1.4.html" target="frame">1.4 Разделение инструкций</a></li>
                                                 </ul>
                                             </li>
-                                            <li><span>Типы</span>
+                                            <li onClick={() => handleClick(2)}
+                                                className={menuel.includes(2) && "menuopen"}><span>Типы</span>
                                             </li>
                                             <li><span>Переменные</span></li>
                                             <li><span>Операторы и выражения</span></li>
@@ -81,7 +95,10 @@
                                             <li><span>Классы</span></li>
                                         </ul></div>
                                 </div><div className="eom-content-container f-grow-1">
-                                    <div className="height-100"><iframe title="eom content" className="height-100" src="/content/eom_1/content/1.1.html" frameborder="0" name="frame" width="100%" height="100%"></iframe></div>
+
+                                    <div className="height-100">
+                                        <div style={{ height: "50px" }}></div>
+                                        <iframe title="eom content" className="height-100" src="/content/eom_1/content/1.1.html" frameborder="0" name="frame" width="100%" height="100%"></iframe></div>
                                 </div>
                             </div>
 
