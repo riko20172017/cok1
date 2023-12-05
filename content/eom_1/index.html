@@ -28,7 +28,7 @@
 
         function Main() {
             const [modal, setModal] = useState("");
-            const [menuel, setMenuel] = useState([]);
+            const [menuel, setMenuel] = useState([2]);
 
             const handleClick = (el) => {
                 if (menuel.includes(el)) {
@@ -74,26 +74,34 @@
                                 <div className="eom-content-head">
                                     <div style={{ height: "50px" }}></div>
                                     <div class="topic-title-wrapper height-100">
-                                        <ul className="topic-title">
-                                            <li onClick={() => handleClick(1)}
-                                                className={menuel.includes(1) && "menuhidden"}>
-                                                <span>1. Основы синтаксиса</span>
-                                                <ul className="page-title">
-                                                    <li><a href="\content\eom_1\content\1.1.html" target="frame">1.1 Что такое PHP?</a></li>
-                                                    <li><a href="\content\eom_1\content\1.2.html" target="frame">1.2 Теги PHP</a></li>
-                                                    <li><a href="\content\eom_1\content\1.3.html" target="frame">1.3 Изолирование от HTML</a></li>
-                                                    <li><a href="\content\eom_1\content\1.4.html" target="frame">1.4 Разделение инструкций</a></li>
-                                                </ul>
-                                            </li>
-                                            <li onClick={() => handleClick(2)}
-                                                className={menuel.includes(2) && "menuopen"}><span>Типы</span>
-                                            </li>
-                                            <li><span>Переменные</span></li>
-                                            <li><span>Операторы и выражения</span></li>
-                                            <li><span>Управляющие конструкции</span></li>
-                                            <li><span>Функции</span></li>
-                                            <li><span>Классы</span></li>
-                                        </ul></div>
+                                        <div className="topic-title">
+                                            <div
+                                                className={menuel.includes(1) ? "menuhidden page-title-cont" : "page-title-cont"}>
+                                                <button onClick={() => handleClick(1)} className="topic-title-btn pointer">1. Основы синтаксиса</button>
+                                                <div className="page-title">
+                                                    <div><a href="\content\eom_1\content\1.1.html" target="frame">1.1 Что такое PHP?</a></div>
+                                                    <div><a href="\content\eom_1\content\1.2.html" target="frame">1.2 Теги PHP</a></div>
+                                                    <div><a href="\content\eom_1\content\1.3.html" target="frame">1.3 Изолирование от HTML</a></div>
+                                                    <div><a href="\content\eom_1\content\1.4.html" target="frame">1.4 Разделение инструкций</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="nodeSpacer"></div>
+                                            <div className={menuel.includes(2) && "menuhidden"}>
+                                                <button onClick={() => handleClick(2)} className="topic-title-btn pointer">Типы</button>
+                                                <div className="page-title">
+                                                    <div><a href="\content\eom_1\content\1.1.html" target="frame">2.1 Что такое PHP?</a></div>
+                                                    <div><a href="\content\eom_1\content\1.2.html" target="frame">2.2 Теги PHP</a></div>
+                                                    <div><a href="\content\eom_1\content\1.3.html" target="frame">2.3 Изолирование от HTML</a></div>
+                                                    <div><a href="\content\eom_1\content\1.4.html" target="frame">2.4 Разделение инструкций</a></div>
+                                                </div>
+                                            </div>
+                                            <div><span>Переменные</span></div>
+                                            <div><span>Операторы и выражения</span></div>
+                                            <div><span>Управляющие конструкции</span></div>
+                                            <div><span>Функции</span></div>
+                                            <div><span>Классы</span></div>
+                                        </div>
+                                    </div>
                                 </div><div className="eom-content-container f-grow-1">
 
                                     <div className="height-100">

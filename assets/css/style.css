@@ -1,6 +1,9 @@
 :root {
     --main-bg-color: #212529;
     --second-color: #007ca4;
+    --custom-border-color: #e7e7e7;
+    --menu-primary-bgcolor: rgba(0, 123, 164, 0.483);
+    --menu-secondary-bgcolor: rgb(0 124 164 / 7%);
     --svg-play: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="white" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>');
     --svg-play-hover: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="rgb(0 124 164)" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>');
     --svg-info: url('data:image/svg+xml,\ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,50,50"><g><path d="M44,24c0,11.045 -8.955,20 -20,20c-11.045,0 -20,-8.955 -20,-20c0,-11.045 8.955,-20 20,-20c11.045,0 20,8.955 20,20z" fill="white"></path><path d="M22,22h4v11h-4zM26.5,16.5c0,1.379 -1.121,2.5 -2.5,2.5c-1.379,0 -2.5,-1.121 -2.5,-2.5c0,-1.379 1.121,-2.5 2.5,-2.5c1.379,0 2.5,1.121 2.5,2.5z" fill="rgb(33 37 41)"></path></g></svg>');
@@ -114,8 +117,13 @@ a {
     display: inline-block;
 }
 
-p-5 {
+.p-5 {
     padding: 5px;
+}
+
+.nodeSpacer {
+    border-bottom: 1px solid var(--custom-border-color);
+    margin: 1rem;
 }
 
 .main-wrapper {
@@ -349,21 +357,16 @@ footer {
     width: 70%px;
 }
 
-.eoms .topic-title>li>span {
-    font-weight: bold;
-}
-
-.eoms .topic-title>li>span,
+.eoms .topic-title>li>button,
 .eoms .page-title a {
     display: block;
+}
+
+.eoms .page-title {}
+
+.eoms .page-title a {
     padding: 7px 4px 7px 4px;
-}
-
-.eoms .page-title a {
     padding-left: 20px;
-}
-
-.eoms .page-title a {
     padding-left: 20px;
 }
 
@@ -381,12 +384,31 @@ footer {
 }
 
 .eoms .page-title {
-    transition: max-height 0.4s ease-in-out;
-    max-height: 500px;
-    height: auto
+    height: auto;
 }
 
-.eoms .menuhidden > .page-title {
-    max-height: 0;
+.page-title-cont {
+    background-color: var(--menu-secondary-bgcolor);
+}
+.page-title-cont.menuhidden {
+    background: none;
+}
+
+.eoms .menuhidden .page-title {
+    height: 0;
     overflow: hidden;
+}
+
+.topic-title-btn {
+    width: auto;
+    height: auto;
+    background-color: inherit;
+    border: none;
+    font-weight: bold;
+    padding: 10px 5px 10px 15px;
+}
+
+.menuhidden {
+    background-color: var(--menu-primary-bgcolor);
+
 }
