@@ -2,129 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <title>Главная</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Главная</title>
 </head>
 
 <body>
-    <div id="container"></div>
+  <div id="container"></div>
 
-    <!-- <script src="assets/js/react.min.js"></script> -->
-    <script src="/assets/js/react.production.min.js"></script>
-    <script src="/assets/js/react-dom.production.min.js"></script>
-    <script src="/assets/js/babel.min.js"></script>
-    <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="/assets/js/modal.js"></script>
-    <script type="text/babel" data-plugins="transform-es2015-modules-umd"
-        src="/assets/js/components/eom/Header.js"></script>
-    <script type="text/babel" data-plugins="transform-es2015-modules-umd"
-        src="/assets/js/components/eom/Footer.jsx"></script>
-    <script type="text/babel" data-plugins="transform-es2015-modules-umd">
-        import Modal from "assets/js/modal";
-        import Header from "assets/js/Header";
-        import Footer from "assets/js/Footer";
-        import { useState, useRef } from "React"
+  <!-- <script src="assets/js/react.min.js"></script> -->
+  <script src="/assets/js/react.production.min.js"></script>
+  <script src="/assets/js/react-dom.production.min.js"></script>
+  <script src="/assets/js/babel.min.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="/assets/js/modal.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+    src="/assets/js/components/eom/Header.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+    src="/assets/js/components/eom/Footer.jsx"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/menuitems.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd">
+    import Modal from "assets/js/modal";
+    import Header from "assets/js/Header";
+    import Footer from "assets/js/Footer";
+    import menuitems from "assets/js/menuitems";
+    import { useState, useRef } from "React"
 
-        function Main() {
-            const [modal, setModal] = useState("");
-            const [menuel, setMenuel] = useState([2]);
+    function Main() {
+      const [modal, setModal] = useState("");
+      const [menuel, setMenuel] = useState(1);
 
-            const handleClick = (el) => {
-                if (menuel.includes(el)) {
-                    setMenuel(menuel.filter(a => a !== el))
-                }
-                else {
-                    setMenuel([...menuel, el])
-                }
-            };
-            return <div className="wrapper flex column eoms">
-                <header>
-                    <div className="container">
-                        <Header />
-                    </div>
-                </header>
-                <div className="breadcrumbs-wrapper">
-                    <div className="container">
-                        <div className="flex f-justify-between">
-                            <div className="breadcrumbs">
-                                <h3>ПМ.09 Проектирование, разработка и оптимизация веб-приложений</h3>
-                            </div>
-                            <div className="info-buttons">
-                                <ul className="height-100 flex">
-                                    <li className="pointer height-100 flex f-align-center"
-                                        onClick={() => { setModal("content") }}>
-                                        <span>О контенте
-                                        </span>
-                                    </li>
-                                    <li className="pointer height-100 flex f-align-center"
-                                        onClick={() => { setModal("keyword") }}>
-                                        <span >Ключевые слова
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <main className="height-100">
-                    <div className="main-wrapper height-100">
-                        <div className="container height-100">
-                            <div className="flex eom-content height-100">
-                                <div className="eom-content-head">
-                                    <div style={{ height: "50px" }}></div>
-                                    <div class="topic-title-wrapper height-100">
-                                        <div className="topic-title">
-                                            <div
-                                                className={menuel.includes(1) ? "menuhidden page-title-cont" : "page-title-cont"}>
-                                                <button onClick={() => handleClick(1)} className="topic-title-btn pointer">1. Основы синтаксиса</button>
-                                                <div className="page-title">
-                                                    <div><a href="\content\eom_1\content\1.1.html" target="frame">1.1 Что такое PHP?</a></div>
-                                                    <div><a href="\content\eom_1\content\1.2.html" target="frame">1.2 Теги PHP</a></div>
-                                                    <div><a href="\content\eom_1\content\1.3.html" target="frame">1.3 Изолирование от HTML</a></div>
-                                                    <div><a href="\content\eom_1\content\1.4.html" target="frame">1.4 Разделение инструкций</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="nodeSpacer"></div>
-                                            <div className={menuel.includes(2) && "menuhidden"}>
-                                                <button onClick={() => handleClick(2)} className="topic-title-btn pointer">Типы</button>
-                                                <div className="page-title">
-                                                    <div><a href="\content\eom_1\content\1.1.html" target="frame">2.1 Что такое PHP?</a></div>
-                                                    <div><a href="\content\eom_1\content\1.2.html" target="frame">2.2 Теги PHP</a></div>
-                                                    <div><a href="\content\eom_1\content\1.3.html" target="frame">2.3 Изолирование от HTML</a></div>
-                                                    <div><a href="\content\eom_1\content\1.4.html" target="frame">2.4 Разделение инструкций</a></div>
-                                                </div>
-                                            </div>
-                                            <div><span>Переменные</span></div>
-                                            <div><span>Операторы и выражения</span></div>
-                                            <div><span>Управляющие конструкции</span></div>
-                                            <div><span>Функции</span></div>
-                                            <div><span>Классы</span></div>
-                                        </div>
-                                    </div>
-                                </div><div className="eom-content-container f-grow-1">
-
-                                    <div className="height-100">
-                                        <div style={{ height: "50px" }}></div>
-                                        <iframe title="eom content" className="height-100" src="/content/eom_1/content/1.1.html" frameborder="0" name="frame" width="100%" height="100%"></iframe></div>
+      return <div className="wrapper flex column eoms">
+        <header>
+          <div className="container">
+            <Header />
+          </div>
+        </header>
+        <div className="breadcrumbs-wrapper">
+          <div className="container">
+            <div className="flex f-justify-between">
+              <div className="breadcrumbs">
+                <h3>ПМ.09 Проектирование, разработка и оптимизация веб-приложений</h3>
+              </div>
+              <div className="info-buttons">
+                <ul className="height-100 flex">
+                  <li className="pointer height-100 flex f-align-center"
+                    onClick={() => { setModal("content") }}>
+                    <span>О контенте
+                    </span>
+                  </li>
+                  <li className="pointer height-100 flex f-align-center"
+                    onClick={() => { setModal("keyword") }}>
+                    <span>Ключевые слова</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <main className="height-100">
+          <div className="main-wrapper height-100">
+            <div className="container height-100">
+              <div className="flex eom-content height-100">
+                <div className="eom-content-head">
+                  <div style={{ height: "50px" }}></div>
+                  <div class="topic-title-wrapper height-100">
+                    <div className="topic-title">
+                      {menuitems.map((el, j) => {
+                        j++
+                        return <div>
+                          <div className={menuel == j && "menuopen"}>
+                            <button onClick={() => setMenuel(j)} className="topic-title-btn pointer">{j}. {el.title}</button>
+                            <div className="page-title">
+                              {el.submenu.map((el, i) => {
+                                i++
+                                return <div>
+                                  <a href={"/content/eom_1/content/" + j + ".html#" + i} target="frame">1.{i} {el.title}</a>
                                 </div>
+                              })}
                             </div>
-
+                          </div>
+                          <div class="nodeSpacer"></div>
                         </div>
+                      })}
+
                     </div>
-                </main>
-                <footer>
-                    <div className="container">
-                        <Footer />
-                    </div>
-                </footer>
-            </div>;
-        }
-        ReactDOM.render(
-            <Main />,
-            document.getElementById('container')
-        );
-    </script>
+                  </div>
+                </div><div className="eom-content-container f-grow-1">
+
+                  <div className="height-100">
+                    <div style={{ height: "50px" }}></div>
+                    <iframe title="eom content"
+                      id="iframe"
+                      className="height-100"
+                      src="/content/eom_1/content/1.1.html"
+                      frameborder="0"
+                      name="frame"
+                      width="100%"
+                      height="100%">
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </main >
+        <footer>
+          <div className="container">
+            <Footer />
+          </div>
+        </footer>
+      </div >;
+    }
+    ReactDOM.render(
+      <Main />,
+      document.getElementById('container')
+    );
+  </script>
 </body>
 
 </html>

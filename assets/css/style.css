@@ -46,6 +46,8 @@
     margin: 0;
     font-family: MyMontserrat;
     font-weight: 300;
+    color: #1e1e1e;
+    scroll-behavior: smooth
 }
 
 ul,
@@ -123,7 +125,7 @@ a {
 
 .nodeSpacer {
     border-bottom: 1px solid var(--custom-border-color);
-    margin: 1rem;
+    margin: 3px;
 }
 
 .main-wrapper {
@@ -357,12 +359,10 @@ footer {
     width: 70%px;
 }
 
-.eoms .topic-title>li>button,
+.eoms .topic-title button,
 .eoms .page-title a {
     display: block;
 }
-
-.eoms .page-title {}
 
 .eoms .page-title a {
     padding: 7px 4px 7px 4px;
@@ -384,31 +384,28 @@ footer {
 }
 
 .eoms .page-title {
-    height: auto;
-}
-
-.page-title-cont {
-    background-color: var(--menu-secondary-bgcolor);
-}
-.page-title-cont.menuhidden {
-    background: none;
-}
-
-.eoms .menuhidden .page-title {
     height: 0;
     overflow: hidden;
 }
 
-.topic-title-btn {
-    width: auto;
+.eoms .menuopen .page-title {
     height: auto;
+}
+
+.topic-title-btn {
+    text-align: left;
+    width: 100%;
     background-color: inherit;
     border: none;
     font-weight: bold;
     padding: 10px 5px 10px 15px;
 }
 
-.menuhidden {
+.menuopen .topic-title-btn {
     background-color: var(--menu-primary-bgcolor);
+}
+
+.menuopen {
+    background-color: var(--menu-secondary-bgcolor);
 
 }
