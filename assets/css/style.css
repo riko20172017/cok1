@@ -46,6 +46,10 @@
     scroll-behavior: smooth
 }
 
+a {
+    color: #111111;
+}
+
 html,
 body,
 ul,
@@ -66,7 +70,6 @@ li {
 
 a {
     text-decoration: none;
-    olo
 }
 
 .flex {
@@ -369,6 +372,10 @@ footer {
     width: 70%px;
 }
 
+.eoms .topic-title {
+    padding: 0 5px;
+}
+
 .eoms .topic-title button,
 .eoms .page-title a {
     display: block;
@@ -376,12 +383,16 @@ footer {
 
 .eoms .page-title a {
     padding: 7px 4px 7px 4px;
-    padding-left: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 .eom-content-container {
     padding: 10px;
+}
+
+.eom-content-header {
+    border: 1px solid #e7e7e7;
+    height: 50px;
 }
 
 .eom-content-container>div {
@@ -396,6 +407,7 @@ footer {
 .eoms .page-title {
     height: 0;
     overflow: hidden;
+    font-size: 13px;
 }
 
 .eoms .menuopen .page-title {
@@ -407,15 +419,18 @@ footer {
     width: 100%;
     background-color: inherit;
     border: none;
-    font-weight: bold;
     padding: 10px 5px 10px 15px;
 }
 
 .menuopen .topic-title-btn {
     background-color: var(--menu-primary-bgcolor);
+    font-weight: bold;
 }
 
 .menuopen {
     background-color: var(--menu-secondary-bgcolor);
+}
 
+.submenuopen {
+    font-weight: bold;
 }

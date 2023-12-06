@@ -80,10 +80,6 @@ export default
                 ]
         },
         {
-            title: "Выражения",
-            submenu: []
-        },
-        {
             title: "Управляющие конструкции",
             submenu:
                 [
@@ -112,6 +108,12 @@ export default
         },
         {
             title: "Классы",
-            submenu: []
+            submenu: [
+                {
+                    title: "Общие понятия",
+                },
+                {
+                    title: "Свойства и методы классов",
+                },]
         },
     ]
