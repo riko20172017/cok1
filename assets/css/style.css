@@ -196,10 +196,11 @@ footer {
 }
 
 .breadcrumbs-delimiter {
-    padding: 0 5px;
     background-image: url("/assets/img/arrow-right.svg");
-    height: 200px;
-    width: 200px;
+    height: 15px;
+    width: 15px;
+    background-size: contain;
+    background-position: center;
 }
 
 .buttons-continer li:nth-child(2) {
@@ -387,12 +388,12 @@ footer {
 }
 
 .eoms .eom-content-head {
-    width: 30%;
+    flex-basis: 30%;
     background-color: white;
 }
 
 .eoms .eom-content-anim {
-    width: 70%px;
+    flex-basis: 70%;
 }
 
 .eoms .topic-title {
@@ -420,6 +421,16 @@ footer {
 
 .eom-content-container>div {
     background-color: white;
+}
+
+.topic-title-wrapper {
+    flex-basis: 1px;
+    flex-grow: 1;
+    height: 1px;
+}
+
+.topic-title-wrapper>div {
+    overflow-y: overlay;
 }
 
 .topic-title-wrapper,
