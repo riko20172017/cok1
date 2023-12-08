@@ -468,3 +468,15 @@ footer {
 .submenuopen {
     font-weight: bold;
 }
+.sidebar-pagin button {
+    width: 100px;
+    background-color: var(--second-color);
+}
+
+.sidebar-pagin button a{
+    color: white
+}
+
+.sidebar-pagin .pagination-index span{
+    width: 15px;
+}

@@ -20,15 +20,17 @@
     src="/assets/js/components/eom/Header.js"></script>
   <script type="text/babel" data-plugins="transform-es2015-modules-umd"
     src="/assets/js/components/eom/Footer.jsx"></script>
-  <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/menuitems.js"></script>
   <script type="text/babel" data-plugins="transform-es2015-modules-umd"
     src="/assets/js/components/eom/SidebarNavButtons.jsx"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+    src="/assets/js/components/eom/Timer.jsx"></script>
   <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/menuitems.js"></script>
   <script type="text/babel" data-plugins="transform-es2015-modules-umd">
     import Modal from "assets/js/modal";
     import Header from "assets/js/Header";
     import Footer from "assets/js/Footer";
     import SidebarNavButtons from "assets/js/SidebarNavButtons";
+    import Timer from "assets/js/Timer";
     import menuitems from "assets/js/menuitems";
     import { useState, useRef } from "React"
 
@@ -106,7 +108,9 @@
                   </div>
                 </div><div className="eom-content-container f-grow-1">
                   <div className="height-100 flex column">
-                    <div className="eom-content-header"></div>
+                    <div className="eom-content-header">
+                      <Timer />
+                    </div>
                     <iframe title="eom content"
                       id="iframe"
                       className=""
