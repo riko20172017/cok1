@@ -24,6 +24,8 @@
     src="/assets/js/components/eom/SidebarNavButtons.jsx"></script>
   <script type="text/babel" data-plugins="transform-es2015-modules-umd"
     src="/assets/js/components/eom/Timer.jsx"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+    src="/assets/js/components/eom/Sidebar.jsx"></script>
   <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/menuitems.js"></script>
   <script type="text/babel" data-plugins="transform-es2015-modules-umd">
     import Modal from "assets/js/modal";
@@ -31,6 +33,7 @@
     import Footer from "assets/js/Footer";
     import SidebarNavButtons from "assets/js/SidebarNavButtons";
     import Timer from "assets/js/Timer";
+    import Sidebar from "assets/js/Sidebar";
     import menuitems from "assets/js/menuitems";
     import { useState, useRef } from "React"
 
@@ -69,33 +72,14 @@
                   <div style={{ height: "50px" }}></div>
                   <div class="topic-title-wrapper">
                     <div className="height-100">
-                      <div className="topic-title">
-                        {menuitems.map((el, j) => {
-                          j++
-                          return <div>
-                            <div className={menuel == j && "menuopen"}>
-                              <a href={"/content/eom_1/content/1.html#" + j} target="frame">
-                                <button
-                                  onClick={() => { setMenuel(j); setMenusel(1) }}
-                                  className="topic-title-btn pointer">{j}. {el.title}</button>
-                              </a>
-                              <div className="page-title">
-                                {el.submenu.map((el, i) => {
-                                  i++
-                                  return <div>
-                                    <a className={menusel == i && "submenuopen"}
-                                      onClick={() => setMenusel(i)}
-                                      href={"/content/eom_1/content/1.html#" + j + "." + i}
-                                      target="frame">{j}.{i} {el.title}</a>
-                                  </div>
-                                })}
-                              </div>
-                            </div>
-                            <div class="nodeSpacer"></div>
-                          </div>
-                        })}
-                      </div>
-                    </div>
+                      <Sidebar
+                        menuitems={menuitems}
+                        setMenuel={setMenuel}
+                        setMenusel={setMenusel}
+                        menuel={menuel}
+                        menusel={menusel}
+                        eom={2}
+                      /></div>
                   </div>
                   <div style={{ height: "50px" }}>
                     <SidebarNavButtons
@@ -108,7 +92,7 @@
                   </div>
                 </div><div className="eom-content-container f-grow-1">
                   <div className="height-100 flex column">
-                    <div className="eom-content-header">
+                    <div className="eom-content-header flex f-justify-center f-align-center">
                       <Timer />
                     </div>
                     <iframe title="eom content"

@@ -6,7 +6,7 @@ export default ({ menuel, menusel, setMenuel, setMenusel, menuitems }) => {
     const nextmenusel = (menusel + 1) > submenulenght ? 1 : (menusel + 1)
 
 
-    return <div className="flex f-justify-center text-center sidebar-pagin">
+    return <div className="flex f-justify-center text-center sidebar-pagin f-align-center height-100">
         <div className="f-grow-1">
             {isPrev() && <button>
                 <a href={`/content/eom_1/content/1.html#${getPrevElem()}.${getLastSubELem()}`}
@@ -17,7 +17,8 @@ export default ({ menuel, menusel, setMenuel, setMenusel, menuitems }) => {
             </button>}
         </div>
         <div className="pagination-index">
-            <span className="inline-block text-center">{menuel}</span>&nbsp;-&nbsp;
+            <span className="inline-block text-center">{menuel}</span>
+            &nbsp;-&nbsp;
             <span className="inline-block text-center">{menusel}</span>
         </div>
         <div className="f-grow-1">
