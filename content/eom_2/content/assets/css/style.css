@@ -1,0 +1,12 @@
+.simulator-html {
+    display: flex;
+}
+
+.outerHtml, .innerHtml {
+    flex: 1;
+}
+
+.outerHtml textarea {
+    height: 100%;
+    width: 100%;
+}
