@@ -6,6 +6,725 @@
     <title>Document</title>
 </head>
 <body>
+    <textarea  name="text" id="area" rows="10">
+        <!DOCTYPE html>
+<html lang="en">
     
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Musical website template - HTML шаблон музыкального сайта</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap-3.0.0/dist/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="css/style.css" rel="stylesheet">
+
+        <link href='https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    	<link href="css/font-awesome.css" rel="stylesheet">
+        <link href="js/swiperjs/idangerous.swiper.css" rel="stylesheet">
+        <link href="js/big-video/css/bigvideo.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="bootstrap-3.0.0/assets/js/html5shiv.js"></script>
+          <script src="bootstrap-3.0.0/assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+    <!-- BEGIN banner area -->
+
+    <div class="top-banner-area">
+        <a href="#"><img src="images/logo.png" alt="Logo"></a>
+        <div class="event-counter bbox-countdown-timer">
+            <div class="event-label">Обновление:</div>
+            <a class="event-more" href="#">
+                <span>+</span>
+                <span>+</span>
+            </a>
+            <div class="counter">
+                <div class="cell counter-days-wrapper" data-singular="day" data-plural="days">
+                    <strong>24</strong>
+                    <span>дня</span>
+                </div>
+                <div class="cell counter-hours-wrapper" data-singular="hour" data-plural="hours">
+                    <strong>20</strong>
+                    <span>часов</span>
+                </div>
+                <div class="cell counter-minutes-wrapper" data-singular="minute" data-plural="minutes">
+                    <strong>26</strong>
+                    <span>минуты</span>
+                </div>
+                <div class="cell counter-seconds-wrapper" data-singular="second" data-plural="seconds">
+                    <strong>10</strong>
+                    <span>секунд</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END banner area -->
+
+    <div class="content-wrap">
+        <div class="main-container">
+            <header>
+                <nav>
+                    <ul>
+                        <li class="current-item" style="margin-left:20px;">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="subnav">
+                            <a href="news.html">Новости</a>
+                            <ul>
+                                <li>
+                                    <a href="news.html">Список новостей</a>
+                                </li>
+                                <li>
+                                    <a href="news-single.html">Полная новость</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="subnav">
+                            <a href="events.html">События</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Событие №1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Событие №1</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="personal.html">О нас</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Галерея</a>
+                        </li>
+                        <li>
+                            <a href="audio.html">Слушать</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <!-- BEGIN mobile nav -->
+
+            <select class="bb-mobile-nav">
+                <option>Главная</option>
+                <option>Новости</option>
+                <option>События</option>
+                <option>О нас</option>
+                <option>Галерея</option>
+                <option>Контакты</option>
+
+            </select>
+
+            <!-- END mobile nav -->
+
+            <span class="clear"></span>
+
+            <!-- BEGIN page content -->
+
+            <div class="row">
+
+            <!-- BEGIN content -->
+
+                <div class="col-md-8">
+                    <content>
+
+                        <!-- BEGIN slider -->
+
+                        <div class="bb-slider-2 bluebox-slider" data-direction-nav=".arrow-links-wrap" data-control-nav=".slider-control-nav">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/slider-bg-1.jpg" class=" img-preload" alt="sample image" data-aspectratio="1.3333" id="img-52552406dfa3e">
+                                        <div class="slider-caption">
+                                            <h2>
+                                                <a href="#"><span>Музыкальный шаблоны сайта<span></span></span></a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/slider-bg-2.jpg" class=" img-preload" alt="2-20100201195917" style="display: none;" data-aspectratio="1.3719" id="img-52552406e0e11">
+                                        <div class="slider-caption">
+                                            <h2>
+                                                <a href="#"><span>Шаблон для музыкальных сайтов<span></span></span></a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/slider-bg-3.jpg" class=" img-preload" alt="sample image" style="display: none;" data-aspectratio="1.3333" id="img-52552406e2e77">
+                                        <div class="slider-caption">
+                                            <h2>
+                                                <a href="#"><span>Бесплатный шаблон HTML<span></span></span></a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bullets-wrap">
+                                <ul class="slider-control-nav">
+                                    <li class="current"><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </div>
+                            <div class="arrow-links-wrap">
+                                <a href="#" class="arrow-left-link prev">
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                                <a href="#" class="arrow-right-link next">
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- END slider -->
+
+                        <div class="bluebox-heading">
+                            <h3>Последние новости</h3>
+                            <a href="#"><i class="icon-list-ul"></i>Смотреть все +</a>
+                        </div>
+
+                        <div class="row content-row">
+
+                            <div class="col-md-6">
+                                <section class="featured-post">
+                                    <a class="image-wrap" href="#">
+                                        <img src="images/test-image-42.png" alt="demo image">
+                                        <span class="image-details"></span>
+                                    </a>
+                                    <h1><a href="#">Креативный дизайн</a></h1>
+                                    <p>Не следует, однако забывать, что сложившаяся структура организации в значительной степени обуславливает...</p>
+                                    <div class="bluebox-info-line">
+                                        <span class="featured-post-date">31 августа 2015</span>
+                                        <span class="featured-post-author">Джон Доу</span>
+                                        <a class="more-link" href="#">Подробнее..</a>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <div class="col-md-6">
+                                <section class="featured-post">
+                                    <a class="image-wrap" href="#">
+                                        <img src="images/test-image-43.png" alt="demo image">
+                                        <span class="image-details"></span>
+                                    </a>
+                                    <h1><a href="#">Качественная графика</a></h1>
+                                    <p>Равным образом новая модель организационной деятельности позволяет оценить...</p>
+                                    <div class="bluebox-info-line">
+                                        <span class="featured-post-date">31 августа 2015</span>
+                                        <span class="featured-post-author">Джон Доу</span>
+                                        <a class="more-link" href="#">Подробнее..</a>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <div class="row content-row">
+
+                            <div class="col-md-6">
+                                <div class="gallery-wrap">
+                                    <div class="image-wrap">
+                                        <a class="image-link" href="#">
+                                            <img src="images/test-image-44.png" alt="demo image">
+                                            <span class="image-details"></span>
+                                        </a>
+                                        <div class="gallery-caption">
+                                            <div>
+                                                <h4><a href="#">Шаблон для вашего блога</a></h4>
+                                                <span>Новости</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="gallery-wrap">
+                                    <div class="image-wrap">
+                                        <a class="image-link" href="#">
+                                            <img src="images/test-image-45.png" alt="demo image">
+                                            <span class="image-details"></span>
+                                        </a>
+                                        <div class="gallery-caption">
+                                            <div>
+                                                <h4><a href="#">Создаем сайт вместе</a></h4>
+                                                <span>Музыка</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row content-row">
+
+                            <div class="col-md-6">
+                                <div class="bluebox-heading">
+                                    <h3>Что нового?</h3>
+                                    <a href="#"><i class="icon-list-ul"></i>Смотреть все..</a>
+                                </div>
+                                <ul class="news-list">
+                                    <li>
+                                        <a href="#" class="image-wrap">
+                                            <img src="images/test-image-46.png" alt="demo image">
+                                            <span class="image-details"></span>
+                                        </a>
+                                        <h4><a href="#">Популярная тема шаблона</a></h4>
+                                        <span>Пришло 31 августа | Джону Доу</span>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="image-wrap">
+                                            <img src="images/test-image-47.png" alt="demo image">
+                                            <span class="image-details"></span>
+                                        </a>
+                                        <h4><a href="#">Скачать бесплатно шаблоны</a></h4>
+                                        <span>Пришло 31 августа | Джону Доу</span>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="image-wrap">
+                                            <img src="images/test-image-10.png" alt="demo image">
+                                            <span class="image-details"></span>
+                                        </a>
+                                        <h4><a href="#">Шаблоны сайтов HTML</a></h4>
+                                        <span>Пришло 31 августа | Джону Доу</span>
+                                    </li>
+                                </ul>
+                                <span class="clear"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="bluebox-heading">
+                                    <h3>Комментарии</h3>
+                                    <a href="#"><i class="icon-list-ul"></i>Смотреть все...</a>
+                                </div>
+
+                                <ul class="news-list">
+
+                                    <li>
+                                        <a href="#" class="image-wrap">
+                                            <img src="images/test-image-48.png" alt="demo image">
+                                            <span class="image-details"></span>
+                                        </a>
+                                        <h4><a href="#">Почему я выбираю html6.com.ru?</a></h4>
+                                        <span>Пришло 31 августа | Джону Доу</span>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="image-wrap">
+                                            <img src="images/test-image-7.png" alt="demo image">
+                                            <span class="image-details"></span>
+                                        </a>
+                                            <h4><a href="#">Как скачать шаблон?</a></h4>
+                                            <span>Пришло 31 августа | Джону Доу</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="image-wrap">
+                                            <img src="images/test-image-49.png" alt="demo image">
+                                            <span class="image-details"></span>
+                                        </a>
+                                        <h4><a href="#">Тенденции в WEB-Дизайне</a></h4>
+                                        <span>Пришло 31 августа | Джону Доу</span>
+                                    </li>
+                                </ul>
+                                <span class="clear"></span>
+                            </div>
+                        </div>
+                    </content>
+                </div>
+
+                <!-- END content -->
+
+                <!-- BEGIN sidebar -->
+
+                <div class="col-md-4">
+
+                    <aside>
+
+                        <!-- BEGIN events -->
+
+                        <div class="bluebox-heading">
+                            <h3>Нас ожидает:</h3>
+                            <a href="#"><i class="icon-calendar"></i>Что именно?</a>
+                        </div>
+                        <div class="events-list widget-wrap">
+
+                            <section class="event">
+                                <div class="date">
+                                    <strong>31</strong>
+                                    <span class="month">Авг</span>
+                                    <span class="details"></span>
+                                </div>
+                                <div class="details">
+                                    <h1><a href="#">Джон Доу</a></h1>
+                                    <span><i class="icon-map-marker"></i>Из Москвы</span>
+                                    <a class="more-link" href="#">Подробнее..</a>
+                                </div>
+                            </section>
+
+                            <section class="event">
+                                <div class="date">
+                                    <strong>31</strong>
+                                    <span class="month">Авг</span>
+                                    <span class="details"></span>
+                                </div>
+                                <div class="details">
+                                    <h1><a href="#">Джон Доу</a></h1>
+                                    <span><i class="icon-map-marker"></i>Из Москвы</span>
+                                    <a class="more-link" href="#">Подробнее..</a>
+                                </div>
+                            </section>
+
+                            <section class="event">
+                                <div class="date">
+                                    <strong>31</strong>
+                                    <span class="month">Авг</span>
+                                    <span class="details"></span>
+                                </div>
+                                <div class="details">
+                                    <h1><a href="#">Джон Доу</a></h1>
+                                    <span><i class="icon-map-marker"></i>Из Москвы</span>
+                                    <a class="more-link" href="#">Подробнее..</a>
+                                </div>
+                            </section>
+
+                            <section class="event">
+                                <div class="date">
+                                    <strong>31</strong>
+                                    <span class="month">Авг</span>
+                                    <span class="details"></span>
+                                </div>
+                                <div class="details">
+                                    <h1><a href="#">Джон Доу</a></h1>
+                                    <span><i class="icon-map-marker"></i>Из Москвы</span>
+                                    <a class="more-link" href="#">Подробнее..</a>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!-- END events -->
+
+                        <!-- BEGIN video -->
+
+                        <div class="bluebox-heading">
+                            <h3>Что посмотреть?</h3>
+                            <a href="#"><i class="icon-facetime-video"></i>Архивы...</a>
+                        </div>
+                      
+                        <div class="video-wrap widget-wrap">
+                            <div class="video-container">
+                                <img src="images/test-image-51.png" data-video="https://www.youtube.com/embed/uFMoeAdk2Do" alt="YouTube Video">
+                            </div>
+                        </div>
+
+                        <!-- END video -->
+
+                        <!-- BEGIN album -->
+
+                        <div class="bluebox-heading">
+                            <h3>Галерея</h3>
+                            <a href="#"><i class="icon-list-ul"></i>Все фото</a>
+                        </div>
+
+                        <div class="album-wrap widget-wrap">
+                            <img src="images/test-image-50.png" alt="demo image">
+                            <div class="album-caption">
+                                <h4><a href="#">Музыка</a></h4>
+                                <span>Лучшее</span>
+                            </div>
+                            <a href="#" class="tracks-list"></a>
+                        </div>
+
+                        <!-- END album -->
+
+                        <!-- BEGIN audio -->
+
+                        <div class="bluebox-heading">
+                            <h3>Слушать на сайте</h3>
+                            <a href="#"><i class="icon-headphones"></i>Все записи</a>
+                        </div>
+
+                        <div class="audio-tracks-wrap gumm-audio-tracks-widget">
+
+                            <div class="gumm-audio-player" data-play-pause-button-mode="toggle" data-src="http://www.djannalee.com/files/downloads/dj_anna_lee_-_club-styles%28326%29_06.09.2015.mp3">
+                                <div class="details">
+                                    <h4>Dj Anna Lee - Mix-Show #326</h4>
+                                    <div class="track-progress-bar">
+                                        <a href="#" class="track-progress">
+                                            <span style="width:0%"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a class="button button-play" href="#">
+                                    <span><i class="icon-play"></i></span>
+                                    <span><i class="icon-play"></i></span>
+                                </a>
+                            </div>
+
+                            <div class="gumm-audio-player" data-play-pause-button-mode="toggle" data-src="http://www.djannalee.com/files/downloads/dj_anna_lee_-_club-styles%28326%29_06.09.2015.mp3">
+                                <div class="details">
+                                    <h4>Dj Anna Lee - Mix-Show #326</h4>
+                                    <div class="track-progress-bar">
+                                        <a href="#" class="track-progress">
+                                            <span style="width:0%"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a class="button button-play" href="#">
+                                    <span><i class="icon-play"></i></span>
+                                    <span><i class="icon-play"></i></span>
+                                </a>
+                            </div>
+
+                            <div class="gumm-audio-player" data-play-pause-button-mode="toggle" data-src="http://www.djannalee.com/files/downloads/dj_anna_lee_-_club-styles%28326%29_06.09.2015.mp3">
+                                <div class="details">
+                                    <h4>Dj Anna Lee - Mix-Show #326</h4>
+                                    <div class="track-progress-bar">
+                                        <a href="#" class="track-progress">
+                                            <span style="width:0%"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a class="button button-play" href="#">
+                                    <span><i class="icon-play"></i></span>
+                                    <span><i class="icon-play"></i></span>
+                                </a>
+                            </div>
+
+                            <div class="gumm-audio-player" data-play-pause-button-mode="toggle" data-src="http://www.djannalee.com/files/downloads/dj_anna_lee_-_club-styles%28326%29_06.09.2015.mp3">
+                                <div class="details">
+                                    <h4>Dj Anna Lee - Mix-Show #326</h4>
+                                    <div class="track-progress-bar">
+                                        <a href="#" class="track-progress">
+                                            <span style="width:0%"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a class="button button-play" href="#">
+                                    <span><i class="icon-play"></i></span>
+                                    <span><i class="icon-play"></i></span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- END audio -->
+
+                    </aside>
+                </div>
+
+                <!-- END sidebar -->
+
+            </div>
+            <span class="clear"></span>
+
+            <!-- END page content -->
+
+            <!-- BEGIN sticky player -->
+
+        <div class="footer-sticky-player">
+        <div class="player-wrap gumm-audio-player" data-src="http://www.djannalee.com/files/downloads/dj_anna_lee_-_club-styles%28326%29_06.09.2015.mp3" data-play-pause-button-mode="toggle" data-playlist-container=".gumm-audio-player-playilst">
+            <div class="track-image">
+                <img src="images/sticky-image-1.jpg" alt="preview image">
+            </div>
+            
+            <div class="description">
+                <h4>Dj Anna Lee - Original Mix</h4>
+                <span class="track-details">Альбом</span>
+                <span class="track-date">Август, 2015</span>
+            </div>
+
+            <div class="buttons">
+                <div class="buttons-wrap">
+                    <a class="player-button backward" href="#">
+                        <span><i class="icon-backward"></i></span>
+                        <span><i class="icon-backward"></i></span>
+                    </a>
+                    <a class="player-button button-play" href="#">
+                        <span><i class="icon-play"></i></span>
+                        <span><i class="icon-play"></i></span>
+                    </a>
+                    <a class="player-button forward" href="#">
+                        <span><i class="icon-forward"></i></span>
+                        <span><i class="icon-forward"></i></span>
+                    </a>
+                </div>
+                <a href="#" class="track-progress">
+                    <span></span>
+                </a>
+                <div class="volume">
+                    <a href="#" class="volume-link button-mute">
+                        <span><i class="icon-volume-up"></i></span>
+                        <span><i class="icon-volume-up"></i></span>
+                    </a>
+                    <a href="#" class="volume-link button-unmute">
+                        <span><i class="icon-volume-off"></i></span>
+                        <span><i class="icon-volume-off"></i></span>
+                    </a>
+                    <a href="#" class="volume-bar">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="gumm-audio-player-playilst" style="display:none;">
+                <div data-src="http://www.djannalee.com/files/downloads/dj_anna_lee_-_club-styles%28326%29_06.09.2015.mp3" data-img-src="images/sticky-image-1.jpg">
+                    <div class="description">
+                        <h4>Dj Anna Lee - Original Mix</h4>
+                        <span class="track-details">Альбом</span>
+                        <span class="track-date">Август, 2015</span>
+                    </div>
+                </div>
+                <div data-src="http://www.djannalee.com/files/downloads/dj_anna_lee_-_club-styles%28326%29_06.09.2015.mp3" data-img-src="images/sticky-image-2.jpg">
+                    <div class="description">
+                        <h4>Dj Anna Lee - Original Mix</h4>
+                        <span class="track-details">Альбом</span>
+                        <span class="track-date">Август, 2015</span>
+                    </div>
+                </div>
+                <div data-src="http://www.djannalee.com/files/downloads/dj_anna_lee_-_club-styles%28326%29_06.09.2015.mp3" data-img-src="images/sticky-image-3.jpg">
+                    <div class="description">
+                        <h4>Dj Anna Lee - Original Mix</h4>
+                        <span class="track-details">Альбом</span>
+                        <span class="track-date">Август, 2015</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END sticky player -->
+
+        </div>
+
+
+        <!-- BEGIN footer -->
+
+        <footer>
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="bluebox-heading">
+                        <h3>О нашем сайте</h3>
+                    </div>
+                    Равным образом консультация с широким активом в значительной степени обуславливает создание форм развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения модели развития.
+                    <span class="clear"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="bluebox-heading">
+                        <h3>Полезное</h3>
+                    </div>
+                    <ul class="news-list">
+                        <li>
+                            <h4><a href="#">Новый шаблон доступент для скачивания</a></h4>
+                            <span>31 августа 2015 | Джон Доу</span>
+                        </li>
+                        <li>
+                            <h4><a href="#">Адаптивный дизайн</a></h4>
+                            <span>31 августа 2015 | Джон Доу</span>
+                        </li>
+                        <li>
+                            <h4><a href="#">Проектирование шаблона</a></h4>
+                            <span>31 августа 2015 | Джон Доу</span>
+                        </li>
+                    </ul>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="bluebox-heading">
+                        <h3>Нас можно найти</h3>
+                    </div>
+                    <div class="social-widget">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span><i class="icon-facebook"></i></span>
+                                    <span><i class="icon-facebook"></i></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span><i class="icon-dribbble"></i></span>
+                                    <span><i class="icon-dribbble"></i></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span><i class="icon-instagram"></i></span>
+                                    <span><i class="icon-instagram"></i></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span><i class="icon-twitter"></i></span>
+                                    <span><i class="icon-twitter"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="clear"></span>
+                </div>
+            </div>
+        </footer>
+
+        <!-- END footer -->
+
+        <div class="copyrights-content">
+            <span style="color:#fff;">Musical website template - HTML шаблон музыкального сайта</span>
+        </div>
+    </div>
+    <div class="footer-logo">
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap-3.0.0/assets/js/jquery.js"></script>
+    <script src="bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+
+    
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.3.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/jplayer/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="js/swiperjs/idangerous.swiper.js"></script>
+    <script src="js/modernizr-2.5.3.min.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/big-video/lib/bigvideo.js"></script>
+    <script src="js/imagesloaded.pkgd.js"></script>
+    
+  </body>
+
+</html>
+
+
+    </textarea>
+    <div id="test"></div>
+    <script>
+        const area = document.getElementById("area")
+        const test = document.getElementById("test")
+        test.innerHTML = area.value
+
+    </script>
 </body>
 </html>
