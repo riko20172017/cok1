@@ -1,0 +1,58 @@
+.simulator-html {
+    display: flex;
+}
+
+.simulator-html .outerHtml {
+    flex-basis: 55%;
+    display: flex;
+}
+
+.simulator-html .outerHtml, .simulator-html .innerHtml {
+    padding: 5px;
+}
+
+.outerHtml-wrapper,
+#innerHtml-wrapper {
+    border: 1px solid black;
+    width: 100%;
+    padding: 5px;
+}
+
+.simulator-html .outerHtml textarea {
+    flex: 1;
+    border: none;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.simulator-html .innerHtml {
+    flex-basis: 45%;
+}
+
+.button-wrapper {
+    display: flex;
+    padding: 5px;
+}
+#message {
+    margin-left: 15px;
+}
+
+.ok, .notok {
+    display: none;
+}
+
+.message-ok .ok {
+    display: inline-block;
+    color: green;
+
+}
+
+.message-notok .notok {
+    display: inline-block;
+    color: red;
+}
+
+.message-notok textarea {
+    background-color: #ff000017;
+}
