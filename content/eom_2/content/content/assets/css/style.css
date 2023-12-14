@@ -7,7 +7,8 @@
     display: flex;
 }
 
-.simulator-html .outerHtml, .simulator-html .innerHtml {
+.simulator-html .outerHtml,
+.simulator-html .innerHtml {
     padding: 5px;
 }
 
@@ -34,11 +35,13 @@
     display: flex;
     padding: 5px;
 }
+
 #message {
     margin-left: 15px;
 }
 
-.ok, .notok {
+.ok,
+.notok {
     display: none;
 }
 
@@ -55,4 +58,13 @@
 
 .message-notok textarea {
     background-color: #ff000017;
+}
+
+.button-container ul {
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.button-container ul li {
+    display: inline-block;
 }
