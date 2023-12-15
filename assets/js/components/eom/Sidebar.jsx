@@ -7,7 +7,7 @@ export default ({ menuitems, setMenuel, setMenusel, menuel, menusel, eom }) => {
       j++
       return <div>
         <div className={menuel == j && "menuopen"}>
-          <a href={`/content/eom_${eom}/content/1.html#${j}`} target="frame">
+          <a href={`/content/eom_${eom}/content/${j}.1.html`} target="frame">
             <button
               onClick={() => { setMenuel(j); setMenusel(1) }}
               className="topic-title-btn pointer">{j}. {el.title}</button>

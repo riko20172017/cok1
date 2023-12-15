@@ -19,10 +19,20 @@
     padding: 5px;
 }
 
-.simulator-html .outerHtml textarea {
+.simulator-html textarea {
     flex: 1;
     border: none;
     padding: 0;
+    width: 0%;
+    height: 0%;
+}
+
+.html #area {
+    width: 100%;
+    height: 100%;
+}
+
+.css #css-area {
     width: 100%;
     height: 100%;
 }

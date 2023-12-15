@@ -58,7 +58,11 @@ export default
         },
         {
             title: "Переменные",
-            submenu: []
+            submenu: [
+                {
+                    title: "Перечисления",
+                },
+            ]
         },
         {
             title: "Операторы и выражения",
