@@ -18,20 +18,24 @@ function main() {
 
 
   const cssArea = document.getElementById("css-area")
-  const inner = document.getElementById("innerHtml-wrapper")
-  const style = document.getElementById("styles")
+  const iframe = document.getElementById("innerHtml-wrapper").contentWindow.document
+  const style = iframe.getElementById("style")
   const button = document.getElementById("button-check")
   const message = document.getElementById("message")
   const body = document.getElementsByTagName("body")[0]
-  inner.innerHTML = area.value
+  iframe.open()
+  iframe.write(area.value)
+  iframe.close()
 
   area.addEventListener("input", (e) => {
-    inner.innerHTML = e.target.value
+    iframe.open()
+    iframe.write(e.target.value)
+    iframe.close()
     body.classList = ""
   })
 
   cssArea.addEventListener("input", (e) => {
-    style.innerHTML = e.target.value
+    style = e.target.value
     body.classList = ""
   })
 

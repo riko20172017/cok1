@@ -1,5 +1,10 @@
+html, body, .simulator-html, #innerHtml-wrapper {
+    height: 100%;
+}
+
 .simulator-html {
     display: flex;
+
 }
 
 .simulator-html .outerHtml {
@@ -23,18 +28,21 @@
     flex: 1;
     border: none;
     padding: 0;
-    width: 0%;
-    height: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.simulator-html.simulator-css textarea {
+    display: none;
 }
 
 .html #area {
-    width: 100%;
-    height: 100%;
+    display: inline-block;
+
 }
 
 .css #css-area {
-    width: 100%;
-    height: 100%;
+    display: inline-block;
 }
 
 .simulator-html .innerHtml {

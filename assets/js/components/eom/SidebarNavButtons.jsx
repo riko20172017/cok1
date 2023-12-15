@@ -1,4 +1,4 @@
-export default ({ menuel, menusel, setMenuel, setMenusel, menuitems }) => {
+export default ({ menuel, menusel, setMenuel, setMenusel, menuitems, eom }) => {
     const menulenght = menuitems.length;
     let submenulenght = menuitems[menuel - 1].submenu.length;
 
@@ -9,7 +9,7 @@ export default ({ menuel, menusel, setMenuel, setMenusel, menuitems }) => {
     return <div className="flex f-justify-center text-center sidebar-pagin f-align-center height-100">
         <div className="f-grow-1">
             {isPrev() && <button>
-                <a href={`/content/eom_1/content/${getPrevElem()}.${getLastSubELem()}.html`}
+                <a href={`/content/eom_${eom}/content/${getPrevElem()}.${getLastSubELem()}.html`}
                     onClick={() => { setMenuel(getPrevElem()); setMenusel(getLastSubELem()) }}
                     target="frame">
                     Назад
@@ -23,7 +23,7 @@ export default ({ menuel, menusel, setMenuel, setMenusel, menuitems }) => {
         </div>
         <div className="f-grow-1">
             {isNext() && <button>
-                <a href={`/content/eom_1/content/${nextmenuel}.${nextmenusel}.html`}
+                <a href={`/content/eom_${eom}/content/${nextmenuel}.${nextmenusel}.html`}
                     onClick={() => { setMenuel(nextmenuel); setMenusel(nextmenusel) }}
                     target="frame">
                     Вперед

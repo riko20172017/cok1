@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/js/script.js"></script>
-  <style id="styles"></style>
   <title>Document</title>
 </head>
 
@@ -24,7 +23,7 @@
       <li><button id="button-css">CSS</button></li>
     </ul>
   </div>
-  <div class="simulator-html">
+  <div class="simulator-html simulator-css">
     <div class="outerHtml">
       <div class="outerHtml-wrapper html" id="tab-html">
         <textarea height="100%" name="text" id="area" rows="10">
@@ -35,11 +34,12 @@
     <title>Магазин товаров для дома</title>
     <!-- Удалите строку ниже -->
     <link rel="stylesheet" href="style.css">
+    <style id="style"></style>
   </head>
   <body>
     <header class="site-header">
       <div class="container">
-        <h1>Gloevk</h1>
+        <h1>Мебельная фабрика "Фабриканти"</h1>
         <p class="description">Разнообразные товары для дома с доставкой</p>
       </div>
     </header>
@@ -59,47 +59,24 @@
     </section>
     <footer class="site-footer">
       <div class="container">
-        <p class="copy">© Кекс, 2020</p>
+        <p class="copy">© кексики, 2020</p>
         <p>Магазин товаров для дома</p>
       </div>
     </footer>
   </body>
 </html>
-              </textarea>
+        </textarea>
         <textarea height="100%" name="text" id="css-area" rows="10">
-
-              </textarea>
+body {
+  background-color: white;
+}
+            </textarea>
       </div>
     </div>
     <div class="innerHtml">
-      <div id="innerHtml-wrapper"></div>
+      <iframe id="innerHtml-wrapper"></iframe>
     </div>
   </div>
-
-
-  <script>
-    const area = document.getElementById("area")
-    const inner = document.getElementById("innerHtml-wrapper")
-    const button = document.getElementById("button-check")
-    const message = document.getElementById("message")
-    const body = document.getElementsByTagName("body")[0]
-    inner.innerHTML = area.value
-
-    area.addEventListener("input", (e) => {
-      inner.innerHTML = e.target.value
-      body.classList = ""
-    })
-
-    button.addEventListener("click", (e) => {
-      const list = document.getElementsByClassName("advantages-list")[0]
-      if (list.children.length >= 4) {
-        body.classList = "message-notok"
-      }
-      else {
-        body.classList = "message-ok"
-      }
-    })
-  </script>
 </body>
 
 </html>
