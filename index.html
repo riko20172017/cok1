@@ -2,161 +2,165 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<title>Главная</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Главная</title>
 </head>
 
 <body class="main">
-	<div id="container"></div>
+  <div id="container"></div>
 
-	<!-- <script src="assets/js/react.min.js"></script> -->
-	<script src="assets/js/react.production.min.js"></script>
-	<script src="assets/js/react-dom.production.min.js"></script>
-	<script src="assets/js/babel.min.js"></script>
-	<script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/modal.js"></script>
-	<script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/components/Header.js"></script>
-	<script type="text/babel" data-plugins="transform-es2015-modules-umd"
-		src="assets/js/components/ContentModal.js"></script>
-	<script type="text/babel" data-plugins="transform-es2015-modules-umd"
-		src="assets/js/components/KeywordModal.js"></script>
-	<script type="text/babel" data-plugins="transform-es2015-modules-umd"
-		src="assets/js/components/GuidanceModal.js"></script>
-	<script type="text/babel" data-plugins="transform-es2015-modules-umd">
-		import Modal from "assets/js/modal";
-		import ContentModal from "assets/js/ContentModal";
-		import KeywordModal from "assets/js/KeywordModal";
-		import GuidanceModal from "assets/js/GuidanceModal";
-		import Header from "assets/js/components/Header";
-		import { useState } from "React"
+  <!-- <script src="assets/js/react.min.js"></script> -->
+  <script src="assets/js/react.production.min.js"></script>
+  <script src="assets/js/react-dom.production.min.js"></script>
+  <script src="assets/js/babel.min.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/modal.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/components/Header.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+    src="assets/js/components/ContentModal.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+    src="assets/js/components/KeywordModal.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
+    src="assets/js/components/GuidanceModal.js"></script>
+  <script type="text/babel" data-plugins="transform-es2015-modules-umd">
+    import Modal from "assets/js/modal";
+    import ContentModal from "assets/js/ContentModal";
+    import KeywordModal from "assets/js/KeywordModal";
+    import GuidanceModal from "assets/js/GuidanceModal";
+    import Header from "assets/js/components/Header";
+    import { useState } from "React"
 
-		function Main() {
-			const [modal, setModal] = useState("");
-			return <div className="wrapper flex column">
-				<header>
-					<div className="container">
-						<Header />
-					</div>
-				</header>
-				<div className="breadcrumbs-wrapper">
-					<div className="container">
-						<div className="flex f-justify-between">
-							<div className="breadcrumbs">
-								<h3>ПМ.09 Проектирование, разработка и оптимизация веб-приложений</h3>
-							</div>
-							<div className="info-buttons">
-								<ul className="height-100 flex">
-									<li className="pointer height-100 flex f-align-center"
-										onClick={() => { setModal("content") }}>
-										<span>О контенте
-										</span>
-									</li>
-									<li className="pointer height-100 flex f-align-center"
-										onClick={() => { setModal("keyword") }}>
-										<span >Ключевые слова
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<main className="height-100">
-					<div className="main-wrapper height-100">
-						<div className="container height-100">
-							<div className="buttons-continer height-100 flex f-align-center">
-								<ul>
-									<li>
-										<div className="eom-button-container flex f-align-center">
-											<span><i className="icons button-icons icon-book"></i></span>
-											<span>
-												<h4>ЭОМ1</h4>
-											</span>
-											<div className="eom-button-container-text">
-												<span>Освоение нового материал</span>
-											</div>
-											<div className="flex f-justify-end f-align-center f-grow-1">
-												<a href="content/eom_1/index.html"><span className="pointer"><i className="icons icon-play"></i></span></a>
-												<span onClick={() => { setModal("eom-1") }} className="icon-wrapper pointer p-5">
-													<i className="icons icon-info"></i>
-												</span>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div className="eom-button-container flex f-align-center">
-											<span><i className="icons button-icons icon-union"></i></span>
-											<span>
-												<h4>ЭОМ2</h4>
-											</span>
-											<div className="eom-button-container-text">
-												<span>Применение изученного материала</span>
-											</div>
-											<div className="flex f-justify-end f-align-center f-grow-1">
-												<a href="content/eom_2/index.html">
-													<span className="pointer">
-														<i className="icons icon-play"></i>
-													</span>
-												</a>
-												<span onClick={() => { setModal("eom-2") }}
-													className="icon-wrapper pointer p-5">
-													<i className="icons icon-info"></i>
-												</span>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div className="eom-button-container flex f-align-center">
-											<span><i className="icons button-icons icon-ok"></i></span>
-											<span>
-												<h4>ЭОМ3</h4>
-											</span>
-											<div className="eom-button-container-text">
-												<span>Диагностика знаний, умений, навыков</span>
-											</div>
-											<div className="flex f-justify-end f-align-center f-grow-1">
-												<span className="pointer"><i className="icons icon-play"></i></span>
-												<span onClick={() => { setModal("eom-3") }} className="icon-wrapper pointer p-5">
-													<i className="icons icon-info"></i></span>
-											</div>
-										</div>
-									</li>
-								</ul>
-								<div className="text-center">
-									<h1 className="text-center">Разработка сетевых приложений</h1>
-									<img src="assets/img/img2.png" width="250px" alt="" srcSet="" />
-								</div>
-							</div>
-						</div>
-					</div>
-				</main>
-				<footer>
-					<div className="container">
-						<ul className="flex f-align-center">
-							<li><i className="footer-logo-container"></i></li>
-							<li>
-								<h3 className="footer-text">ФГОС СПО 09.02.07 Информационные системы и программирование</h3>
-							</li>
-						</ul>
-					</div>
-				</footer>
-				{modal &&
-					<Modal toggle={() => { setModal("") }}>
-						{modal == "keyword" && <KeywordModal />}
-						{modal == "content" && <ContentModal />}
-						{modal == "eom-1" && <GuidanceModal eom={modal} />}
-						{modal == "eom-2" && <GuidanceModal eom={modal} />}
-						{modal == "eom-3" && <GuidanceModal eom={modal} />}
-					</Modal>}
-			</div>;
-		}
+    function Main() {
+      const [modal, setModal] = useState("");
+      return <div className="wrapper flex column">
+        <header>
+          <div className="container">
+            <Header />
+          </div>
+        </header>
+        <div className="breadcrumbs-wrapper">
+          <div className="container">
+            <div className="flex f-justify-between">
+              <div className="breadcrumbs">
+                <h3>ПМ.09 Проектирование, разработка и оптимизация веб-приложений</h3>
+              </div>
+              <div className="info-buttons">
+                <ul className="height-100 flex">
+                  <li className="pointer height-100 flex f-align-center"
+                    onClick={() => { setModal("content") }}>
+                    <span>О контенте
+                    </span>
+                  </li>
+                  <li className="pointer height-100 flex f-align-center"
+                    onClick={() => { setModal("keyword") }}>
+                    <span >Ключевые слова
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <main className="height-100">
+          <div className="main-wrapper height-100">
+            <div className="container height-100">
+              <div className="buttons-continer height-100 flex f-align-center">
+                <ul>
+                  <li>
+                    <div className="eom-button-container flex f-align-center">
+                      <span><i className="icons button-icons icon-book"></i></span>
+                      <span>
+                        <h4>ЭОМ1</h4>
+                      </span>
+                      <div className="eom-button-container-text">
+                        <span>Освоение нового материал</span>
+                      </div>
+                      <div className="flex f-justify-end f-align-center f-grow-1">
+                        <a href="content/eom_1/index.html"><span className="pointer"><i className="icons icon-play"></i></span></a>
+                        <span onClick={() => { setModal("eom-1") }} className="icon-wrapper pointer p-5">
+                          <i className="icons icon-info"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="eom-button-container flex f-align-center">
+                      <span><i className="icons button-icons icon-union"></i></span>
+                      <span>
+                        <h4>ЭОМ2</h4>
+                      </span>
+                      <div className="eom-button-container-text">
+                        <span>Применение изученного материала</span>
+                      </div>
+                      <div className="flex f-justify-end f-align-center f-grow-1">
+                        <a href="content/eom_2/index.html">
+                          <span className="pointer">
+                            <i className="icons icon-play"></i>
+                          </span>
+                        </a>
+                        <span onClick={() => { setModal("eom-2") }}
+                          className="icon-wrapper pointer p-5">
+                          <i className="icons icon-info"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="eom-button-container flex f-align-center">
+                      <span><i className="icons button-icons icon-ok"></i></span>
+                      <span>
+                        <h4>ЭОМ3</h4>
+                      </span>
+                      <div className="eom-button-container-text">
+                        <span>Диагностика знаний, умений, навыков</span>
+                      </div>
+                      <div className="flex f-justify-end f-align-center f-grow-1">
+                        <a href="content/eom_3/index.html">
+                          <span className="pointer">
+                            <i className="icons icon-play"></i>
+                          </span>
+                        </a>
+                        <span onClick={() => { setModal("eom-3") }} className="icon-wrapper pointer p-5">
+                          <i className="icons icon-info"></i></span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div className="text-center">
+                  <h1 className="text-center">Разработка сетевых приложений</h1>
+                  <img src="assets/img/img2.png" width="250px" alt="" srcSet="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <div className="container">
+            <ul className="flex f-align-center">
+              <li><i className="footer-logo-container"></i></li>
+              <li>
+                <h3 className="footer-text">ФГОС СПО 09.02.07 Информационные системы и программирование</h3>
+              </li>
+            </ul>
+          </div>
+        </footer>
+        {modal &&
+          <Modal toggle={() => { setModal("") }}>
+            {modal == "keyword" && <KeywordModal />}
+            {modal == "content" && <ContentModal />}
+            {modal == "eom-1" && <GuidanceModal eom={modal} />}
+            {modal == "eom-2" && <GuidanceModal eom={modal} />}
+            {modal == "eom-3" && <GuidanceModal eom={modal} />}
+          </Modal>}
+      </div>;
+    }
 
-		ReactDOM.render(
-			<Main />,
-			document.getElementById('container')
-		);
-	</script>
+    ReactDOM.render(
+      <Main />,
+      document.getElementById('container')
+    );
+  </script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@ export default ({ menuel, menusel, setMenuel, setMenusel, menuitems, eom }) => {
         </div>
         <div className="pagination-index">
             <span className="inline-block text-center">{menuel}</span>
-            &nbsp;-&nbsp;
+            .
             <span className="inline-block text-center">{menusel}</span>
         </div>
         <div className="f-grow-1">
