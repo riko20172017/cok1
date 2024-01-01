@@ -1,4 +1,4 @@
-window.menu =
+export default
     [
         {
             title: "Основы синтаксиса",

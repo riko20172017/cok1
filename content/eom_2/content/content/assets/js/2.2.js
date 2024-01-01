@@ -1,5 +1,3 @@
-import { main } from "./common.js"
-
 function validate(iframe) {
     const fontSize = window.getComputedStyle(iframe.getElementsByTagName("h1")[0]).fontSize
     if (fontSize == "40px") {
@@ -10,4 +8,4 @@ function validate(iframe) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => main(validate), false);
+document.addEventListener('DOMContentLoaded', () => commonJs(validate), false);

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="height-100">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href=".../../../css/style.css">
+</head>
+
+<body class="height-100 eom-content">
+  <div class="flex f-justify-center text-center sidebar-pagin f-align-center height-100" id="app"></div>
+</body>
+<script>
+  const eom = localStorage.getItem("eom")
+  const menu = JSON.parse(localStorage.getItem("menu"))
+  const m = parseInt(localStorage.getItem("menuitems-m"))
+  const s = parseInt(localStorage.getItem("menuitems-s"))
+
+  const menulenght = menu.length;
+  let submenulenght = menu[m - 1].submenu.length;
+  const nextmenuel = (s + 1) > submenulenght ? (m + 1) : m
+  const nextmenusel = (s + 1) > submenulenght ? 1 : (s + 1)
+
+  const html = `
+      <div class="f-grow-1">
+        ${isPrev() ? `<button>
+          <a href="../../content/eom_${eom}/index.html?m=${getPrevElem()}&s=${getLastSubELem()}"
+            target="_parent">
+            Назад
+          </a>
+        </button>`: ``}
+      </div>
+      <div class="pagination-index">
+        <span class="inline-block text-center">${m}</span>
+        .
+        <span class="inline-block text-center">${s}</span>
+      </div>
+      <div class="f-grow-1">
+        ${isNext() ? `<button>
+          <a href="../../content/eom_${eom}/index.html?m=${nextmenuel}&s=${nextmenusel}"
+            target="_parent">
+            Вперед
+          </a>
+        </button>`: ``}
+      </div>`
+  document.querySelector("#app").innerHTML = html
+
+  function getPrevElem() {
+    if (s > 1) {
+      return m;
+    }
+    else {
+      if (m < 2) {
+        return 1
+      }
+      else {
+        return m - 1
+      }
+    }
+  }
+
+  function getLastSubELem() {
+    if (s > 1) {
+      return s - 1
+    }
+    else {
+      if (m < 2) {
+        return 1
+      }
+      else {
+        return menu[m - 2].submenu.length
+      }
+    }
+  }
+
+  function isPrev() {
+    return !(m == 1 && s == 1)
+  }
+
+  function isNext() {
+    return nextmenuel <= menulenght
+  }
+</script>
+
+</html>

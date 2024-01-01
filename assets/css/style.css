@@ -64,6 +64,11 @@ h6 {
     margin: 0;
 }
 
+iframe {
+    border: 0;
+    width: 100%;
+}
+
 ul,
 li {
     list-style: none;
@@ -111,6 +116,10 @@ a {
 
 .height-100 {
     height: 100%;
+}
+
+.height-99 {
+    height: 99%;
 }
 
 .text-center {
@@ -197,14 +206,6 @@ footer {
 
 .breadcrumbs h5 {
     font-weight: normal;
-}
-
-.breadcrumbs-delimiter {
-    background-image: url("/assets/img/arrow-right.svg");
-    height: 15px;
-    width: 15px;
-    background-size: contain;
-    background-position: center;
 }
 
 .buttons-continer li:nth-child(2) {
@@ -325,26 +326,32 @@ footer {
     background-image: url("../img/home.svg");
     width: 17px;
     height: 17px;
-    padding-right: 5px;
+    padding-right: 2px;
+    background-position: 0 -1px;
 }
 
 /* Modals =============================================================== */
 
-.content-modal {
+.modal {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.782);
+    display: none;
 }
 
-.content-modal h3 {
+.show .modal {
+    display: flex;
+}
+
+.modal-style h3 {
     margin-bottom: 5px;
     background-color: #0b044717;
 }
 
-.content-modal p {
+.modal-style p {
     margin: 5px 0 10px 0;
     font-size: 14px;
 }
@@ -363,6 +370,22 @@ footer {
 .modal-container {
     width: 900px;
     padding: 10px 50px 30px;
+}
+
+.modal-content,
+.modal-keyword,
+.modal-guidance-eom-1,
+.modal-guidance-eom-2,
+.modal-guidance-eom-3 {
+    display: none;
+}
+
+.content .modal-content,
+.keyword .modal-keyword,
+.guidance-1 .modal-guidance-eom-1,
+.guidance-2 .modal-guidance-eom-3,
+.guidance-3 .modal-guidance-eom-3 {
+    display: block;
 }
 
 .guidanceModal {
@@ -472,15 +495,16 @@ footer {
 .submenuopen {
     font-weight: bold;
 }
+
 .sidebar-pagin button {
     width: 100px;
     background-color: var(--second-color);
 }
 
-.sidebar-pagin button a{
+.sidebar-pagin button a {
     color: white
 }
 
-.sidebar-pagin .pagination-index span{
+.sidebar-pagin .pagination-index span {
     width: 15px;
 }

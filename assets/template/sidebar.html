@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <title>Document</title>
+
+
+</head>
+
+<body class="eoms">
+  <div class="topic-title"></div>
+</body>
+
+<script>
+  const eom = localStorage.getItem("eom")
+  const menu = JSON.parse(localStorage.getItem("menu"))
+  const m = parseInt(localStorage.getItem("menuitems-m"))
+  const s = parseInt(localStorage.getItem("menuitems-s"))
+
+  const sidebar = menu.map((el, j) => {
+    j++
+    return `<div>
+      <div class="${m == j && "menuopen"}">
+        <a href="../../content/eom_${eom}/index.html?m=${j}&s=1" target="_parent">
+          <button
+            class="topic-title-btn pointer">${j}. ${el.title}</button>
+        </a>
+        <div class="page-title">` +
+      el.submenu.map((el, i) => {
+        i++
+        return `<div>
+                  <a class="${s == i && "submenuopen"}"
+                    href="../../content/eom_${eom}/index.html?m=${j}&s=${i}"
+                    target="_parent">${j}.${i} ${el.title}
+                  </a>
+                </div>`
+      }).join("") +
+      `</div>
+      </div>
+      <div class="nodeSpacer"></div>
+    </div>
+    `})
+
+  document.querySelector(".topic-title").innerHTML = sidebar.join("")
+</script>
+
+</html>

@@ -1,4 +1,4 @@
-export function main(validateFunc) {
+commonJs = (validateFunc) => {
   const bHtml = document.getElementById("button-html")
   const bCss = document.getElementById("button-css")
   const tabs = document.getElementById("tab-html")

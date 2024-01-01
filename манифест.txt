@@ -1,0 +1,24 @@
+<course>
+<title>Разработка сетевых приложений</title>
+<description/>
+<language>ru</language>
+<code>301129979</code>
+<fgos_title>ФГОС СПО 09.02.07</fgos_title>
+<fgos_text>Информационные системы и программирование</fgos_text>
+<mdk_title>МДК.09.01</mdk_title>
+<mdk_text>Проектирование и разработка веб-приложений</mdk_text>
+<structure>
+<item0>
+<name>Разработка сетевых приложений</name>
+<code>01_01</code>
+</item0>
+<item1>
+<name>Ситуационные задачи</name>
+<code>02_01</code>
+</item1>
+<item2>
+<name>Сопоставьте правильно</name>
+<code>03_01</code>
+</item2>
+</structure>
+</course>

@@ -1,5 +1,3 @@
-import { main } from "./common.js"
-
 function validate(iframe) {
     const styles = window.getComputedStyle(iframe.getElementsByTagName("h1")[0])
     if (
@@ -19,4 +17,4 @@ function validate(iframe) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => main(validate), false);
+document.addEventListener('DOMContentLoaded', () => commonJs(validate), false);

@@ -4,127 +4,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <s>
+    <script src="./assets/js/menuitems.js"></script>
+  </s>
   <title>Главная</title>
+
 </head>
 
 <body>
-  <div id="container"></div>
+  <div id="container">
 
-  <!-- <script src="assets/js/react.min.js"></script> -->
-  <script src="/assets/js/react.production.min.js"></script>
-  <script src="/assets/js/react-dom.production.min.js"></script>
-  <script src="/assets/js/babel.min.js"></script>
-  <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="/assets/js/modal.js"></script>
-  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
-    src="/assets/js/components/eom/Header.js"></script>
-  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
-    src="/assets/js/components/eom/Footer.jsx"></script>
-  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
-    src="/assets/js/components/eom/SidebarNavButtons.jsx"></script>
-  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
-    src="/assets/js/components/eom/Timer.jsx"></script>
-  <script type="text/babel" data-plugins="transform-es2015-modules-umd"
-    src="/assets/js/components/eom/Sidebar.jsx"></script>
-  <script type="text/babel" data-plugins="transform-es2015-modules-umd" src="assets/js/menuitems.js"></script>
-  <script type="text/babel" data-plugins="transform-es2015-modules-umd">
-    import Modal from "assets/js/modal";
-    import Header from "assets/js/Header";
-    import Footer from "assets/js/Footer";
-    import SidebarNavButtons from "assets/js/SidebarNavButtons";
-    import Timer from "assets/js/Timer";
-    import Sidebar from "assets/js/Sidebar";
-    import menuitems from "assets/js/menuitems";
-    import { useState, useRef } from "React"
-
-    function Main() {
-      const [modal, setModal] = useState("");
-      const [menuel, setMenuel] = useState(1);
-      const [menusel, setMenusel] = useState(1);
-
-      return <div className="wrapper flex column eoms">
-        <header>
-          <div className="container">
-            <Header />
-          </div>
-        </header>
-        <div className="breadcrumbs-wrapper">
-          <div className="container">
-            <div className="flex f-justify-between">
-              <div className="breadcrumbs flex f-align-center">
-                <span className="breadcrumbs-home bold">
-                  <a href="/">
-                    <i className="inline-block icons icon-home"></i>
-                    Главная
-                  </a>
-                </span>
-                <span className="breadcrumbs-delimiter"></span>
-                <h5>ПМ.09 Проектирование, разработка и оптимизация веб-приложений</h5>
-              </div>
-            </div>
-          </div>
+    <div class="wrapper flex column eoms">
+      <header>
+        <div class="container">
+          <iframe src="../../assets/template/header-eoms.html" frameborder="0" height="46px"></iframe>
         </div>
-        <main>
-          <div className="main-wrapper height-100">
-            <div className="container height-100">
-              <div className="flex eom-content height-100">
-                <div className="eom-content-head flex column">
-                  <div style={{ height: "50px" }}></div>
-                  <div class="topic-title-wrapper">
-                    <div className="height-100">
-                      <Sidebar
-                        menuitems={menuitems}
-                        setMenuel={setMenuel}
-                        setMenusel={setMenusel}
-                        menuel={menuel}
-                        menusel={menusel}
-                        eom={3}
-                      />
-                    </div>
-                  </div>
-                  <div style={{ height: "50px" }}>
-                    <SidebarNavButtons
-                      menuel={menuel}
-                      menusel={menusel}
-                      setMenuel={setMenuel}
-                      setMenusel={setMenusel}
-                      menuitems={menuitems}
-                      eom={3}
-                    />
-                  </div>
-                </div><div className="eom-content-container f-grow-1">
-                  <div className="height-100 flex column">
-                    <div className="eom-content-header flex f-justify-center f-align-center">
-                      <Timer />
-                    </div>
-                    <iframe title="eom content"
-                      id="iframe"
-                      className=""
-                      src="/content/eom_3/content/1.1.html"
-                      frameborder="0"
-                      name="frame"
-                      width="100%"
-                      height="100%">
-                    </iframe>
+      </header>
+      <div class="breadcrumbs-wrapper">
+        <div class="container">
+          <iframe src="../../assets/template/breadcrumbs.html" frameborder="0" name="breadcrumbs" id="breadcrumbs"
+            height="39px"></iframe>
+        </div>
+      </div>
+      <main>
+        <div class="main-wrapper height-100">
+          <div class="container height-100">
+            <div class="flex eom-content height-100">
+              <div class="eom-content-head flex column">
+                <div style="height: 50px"></div>
+                <div class="topic-title-wrapper">
+                  <div class="height-100">
+                    <iframe src="../../assets/template/sidebar.html" name="sidebar" frameborder="0" id="sidebar"
+                      height="99%"></iframe>
                   </div>
                 </div>
+                <div style="height: 50px">
+                  <iframe src="../../assets/template/sidebar-buttons.html" frameborder="0" name="sidebar-buttons"
+                    id="sidebar-buttons" height="100%"></iframe>
+                </div>
               </div>
-
+              <div class="eom-content-container f-grow-1">
+                <div class="height-100 flex column">
+                  <div class="eom-content-header flex f-justify-center f-align-center">
+                    <iframe title="itimer" id="itimer" class="" src="../../assets/template/timer.html" frameborder="0"
+                      name="itimer" width="100px" height="100%"></iframe>
+                  </div>
+                  <iframe title="eom content" id="iframe" class="" src="content/1.1.html" frameborder="0" name="content"
+                    width="100%" height="100%">
+                  </iframe>
+                </div>
+              </div>
             </div>
+
           </div>
-        </main >
-        <footer>
-          <div className="container">
-            <Footer />
-          </div>
-        </footer>
-      </div >;
-    }
-    ReactDOM.render(
-      <Main />,
-      document.getElementById('container')
-    );
-  </script>
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+
+        </div>
+      </footer>
+    </div>
+  </div>
 </body>
+<script>
+  var params = location.href.split('?')[1].split('&');
+  const m = parseInt(params[0].split("=")[1])
+  const s = parseInt(params[1].split("=")[1])
+
+  localStorage.setItem("eom", 3)
+  localStorage.setItem("menuitems-m", m)
+  localStorage.setItem("menuitems-s", s)
+  localStorage.setItem("menu", JSON.stringify(window.menu))
+
+
+  document.querySelector("#iframe").src = `content/${m}.${s}.html`
+</script>
 
 </html>

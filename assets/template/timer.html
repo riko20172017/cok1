@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="height-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body class="eom-content height-100 flex f-justify-center f-align-center">
+    <div class="stopwatch">
+        <div class="numbers">
+            <span>00 :</span>
+            <span id="min"></span>
+            <span id="sec"></span>
+        </div>
+    </div>
+</body>
+<script>
+    (() => {
+        let interval;
+        let time = 0
+        let running = true;
+        if (running) {
+            interval = setInterval(() => {
+                time = time + 10;
+                document.querySelector("#min").innerHTML = ("0" + Math.floor((time / 60000) % 60)).slice(-2) + " :"
+                document.querySelector("#sec").innerHTML = ("0" + Math.floor((time / 1000) % 60)).slice(-2)
+            }, 10);
+        } else if (!running) {
+            clearInterval(interval);
+        }
+        return () => clearInterval(interval);
+    })(true);
+</script>
+
+</html>
