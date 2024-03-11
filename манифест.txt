@@ -1,15 +1,15 @@
 <course>
-<title>Разработка сетевых приложений</title>
+<title>Технология проектирования и разработки интерфейсов пользователя</title>
 <description/>
 <language>ru</language>
 <code>301129979</code>
 <fgos_title>ФГОС СПО 09.02.07</fgos_title>
 <fgos_text>Информационные системы и программирование</fgos_text>
-<mdk_title>МДК.09.01</mdk_title>
+<mdk_title>МДК.08.01</mdk_title>
 <mdk_text>Проектирование и разработка веб-приложений</mdk_text>
 <structure>
 <item0>
-<name>Разработка сетевых приложений</name>
+<name>Технология проектирования и разработки интерфейсов пользователя</name>
 <code>01_01</code>
 </item0>
 <item1>

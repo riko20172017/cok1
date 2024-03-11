@@ -69,7 +69,12 @@
         return 1
       }
       else {
-        return menu[m - 2].submenu.length
+        if (menu[m - 2].submenu.length == 0) {
+          return 1
+        }
+        else {
+          return menu[m - 2].submenu.length
+        }
       }
     }
   }
