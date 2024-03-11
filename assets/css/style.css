@@ -330,6 +330,15 @@ footer {
     background-position: 0 -1px;
 }
 
+.button-text-head {
+    display: block;
+}
+
+.button-text-description {
+    font-size: 11px;
+    position: absolute;
+}
+
 /* Modals =============================================================== */
 
 .modal {
