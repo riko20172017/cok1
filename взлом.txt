@@ -1,2 +1,2 @@
-b-a.width()-1
-b-a.width()-1 + 500
+.trial_banner {
+.trial_banner { display: none; 

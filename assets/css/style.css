@@ -355,6 +355,19 @@ footer {
     display: flex;
 }
 
+.modal-style {
+    font-size: 12px;
+}
+
+.modal-style li{
+    list-style: inside;
+}
+
+.modal-style li li {
+    padding-left: 20px;
+    list-style-type: circle;
+}
+
 .modal-style h3 {
     margin-bottom: 5px;
     background-color: #0b044717;
@@ -362,7 +375,6 @@ footer {
 
 .modal-style p {
     margin: 5px 0 10px 0;
-    font-size: 14px;
 }
 
 .modalWrapper {
@@ -392,7 +404,7 @@ footer {
 .content .modal-content,
 .keyword .modal-keyword,
 .guidance-1 .modal-guidance-eom-1,
-.guidance-2 .modal-guidance-eom-3,
+.guidance-2 .modal-guidance-eom-2,
 .guidance-3 .modal-guidance-eom-3 {
     display: block;
 }
